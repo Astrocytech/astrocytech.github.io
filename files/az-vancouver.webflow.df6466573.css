@@ -3708,3 +3708,288 @@ h1, h2, h3, h4, h5, h6,
     grid-row-end: span 1;
   }
 }
+
+/* Precision refinement pass (design-only, no image changes) */
+:root {
+  --surface-0: #0b0d10;
+  --surface-1: #101318;
+  --surface-2: #141920;
+  --line-subtle: rgba(255, 255, 255, 0.08);
+  --line-strong: rgba(255, 255, 255, 0.14);
+}
+
+/* Gradient discipline: one restrained accent treatment */
+.gradient-text {
+  background-image: none !important;
+  -webkit-text-fill-color: inherit;
+  color: #9fd8ff;
+}
+
+/* Vertical rhythm and section separation */
+.section {
+  padding-top: 62px;
+  padding-bottom: 62px;
+}
+
+.section + .section {
+  border-top: 1px solid var(--line-subtle);
+}
+
+/* Nav precision */
+.container.nav-container {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.link-container {
+  grid-column-gap: 26px;
+}
+
+.link-block {
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.15px;
+}
+
+.link-block-underline {
+  opacity: 0.55;
+}
+
+.link-block.is-active {
+  color: #cfe9ff;
+}
+
+.link-block.is-active .link-block-underline {
+  opacity: 1;
+  height: 1px;
+}
+
+/* Headline and supporting copy density */
+.hero-text {
+  letter-spacing: -0.6px;
+}
+
+.hero-text-holder {
+  grid-row-gap: 10px;
+}
+
+.paragraph-hero {
+  max-width: 64ch;
+  padding-top: 14px;
+  line-height: 1.62;
+}
+
+/* Buttons: restrained controls, no glow */
+.gradient-link {
+  background-image: none;
+  border: 1px solid var(--line-strong);
+  border-radius: 8px;
+  padding: 11px 18px;
+}
+
+.gradient-link:hover {
+  border-color: rgba(159, 216, 255, 0.52);
+}
+
+.cta-primary,
+.cta-secondary {
+  border-radius: 8px;
+  border: 1px solid var(--line-strong);
+  background: rgba(255, 255, 255, 0.02);
+  box-shadow: none;
+  padding: 14px 34px;
+  min-height: 42px;
+}
+
+.cta-primary:hover,
+.cta-secondary:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.cta-primary .link-gradient-text,
+.cta-secondary .link-gradient-text,
+.gradient-link .link-gradient-text {
+  background: transparent;
+  padding: 0;
+}
+
+/* Cards: sharper, less friendly */
+.feature-cards-container,
+.quick-access-card-holder,
+.quick-access,
+.grey-border {
+  border-radius: 12px;
+}
+
+.feature-cards-container,
+.quick-access-card-holder {
+  border: 1px solid var(--line-subtle);
+  box-shadow: none;
+}
+
+.quick-access-card-holder {
+  padding: 76px 42px 24px;
+}
+
+.quick-access-card-holder.less-padding {
+  padding-top: 42px;
+}
+
+.quick-access-card-holder:hover {
+  transform: none !important;
+  box-shadow: none !important;
+  border-color: var(--line-subtle) !important;
+}
+
+.quick-access-card h1 {
+  font-size: 30px;
+  line-height: 1.15;
+  margin-bottom: 8px;
+}
+
+.quick-access-card p {
+  font-size: 15px;
+  line-height: 1.5;
+  color: #b9c1cb;
+}
+
+/* Micro-alignment tightening */
+.title-container,
+.content,
+.sticky-text-holder,
+.hero-copy {
+  max-width: 66ch;
+}
+
+.hero-button-holder {
+  margin-top: 34px;
+}
+
+.logo-grid-holder {
+  margin-top: 26px;
+  padding-top: 10px;
+}
+
+/* Glyphser hero mark refinement */
+.glyphser-logo-wrap {
+  margin-top: 28px;
+  margin-bottom: 18px;
+}
+
+.glyphser-logo-img {
+  width: min(480px, 79vw) !important;
+}
+
+/* Footer tone-down */
+.footer {
+  padding-top: 18px;
+}
+
+.footer-line {
+  opacity: 0.7;
+}
+
+@media screen and (max-width: 991px) {
+  .section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .container.nav-container {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .quick-access-card-holder {
+    padding: 60px 28px 20px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .quick-access-card h1 {
+    font-size: 24px;
+  }
+
+  .paragraph-hero {
+    max-width: 100%;
+  }
+}
+
+/* Micro-alignment refinement pass */
+:root {
+  --content-col: 860px;
+}
+
+#Glyphser .center-text,
+#More .center-text,
+#Features .center-text,
+#Overview .center-text {
+  width: 100%;
+  max-width: var(--content-col);
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  align-items: flex-start;
+}
+
+#Glyphser .paragraph-hero,
+#More .paragraph-hero,
+#Features .paragraph-hero,
+#Overview .paragraph-hero,
+#Glyphser .hero-button-holder,
+#More .hero-button-holder,
+#Features .hero-button-holder,
+#Overview .hero-button-holder {
+  width: 100%;
+}
+
+#Glyphser .hero-button-holder,
+#More .hero-button-holder,
+#Features .hero-button-holder,
+#Overview .hero-button-holder {
+  justify-content: flex-start;
+}
+
+.features-container {
+  margin-top: 96px;
+  grid-row-gap: 128px;
+}
+
+.list-container {
+  margin-top: 40px;
+}
+
+.title-container,
+.sticky-text-holder,
+.content,
+.quick-access-card {
+  max-width: 64ch;
+}
+
+.quick-access-card-holder {
+  display: flex;
+  align-items: flex-start;
+}
+
+@media screen and (max-width: 991px) {
+  #Glyphser .center-text,
+  #More .center-text,
+  #Features .center-text,
+  #Overview .center-text {
+    text-align: center;
+    align-items: center;
+  }
+
+  #Glyphser .hero-button-holder,
+  #More .hero-button-holder,
+  #Features .hero-button-holder,
+  #Overview .hero-button-holder {
+    justify-content: center;
+  }
+
+  .features-container {
+    margin-top: 76px;
+    grid-row-gap: 96px;
+  }
+}
