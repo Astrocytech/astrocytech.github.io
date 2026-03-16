@@ -355,11 +355,19 @@ a:hover {
   background-color: rgba(178, 214, 236, 0.5);
 }
 
+/* Glassmorphism panel for text readability */
 .hero-content {
   position: relative;
   z-index: 2;
   text-align: left;
   max-width: 900px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 24px;
+  padding: 3rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
 .hero-split {
@@ -372,6 +380,14 @@ a:hover {
   margin: 0 auto;
 }
 
+.hero-split .hero-content {
+  background: rgba(255, 255, 255, 0.12);
+  padding: 0;
+  border: none;
+  box-shadow: none;
+  backdrop-filter: none;
+}
+
 .hero-text {
   max-width: 540px;
 }
@@ -380,9 +396,18 @@ a:hover {
   font-size: clamp(2.5rem, 5vw, 3.5rem);
   font-weight: 700;
   letter-spacing: -0.03em;
-  line-height: 1.1;
-  margin-bottom: var(--space-lg);
+  line-height: 1.15;
+  margin-bottom: var(--space-xl);
   color: var(--text-primary);
+}
+
+/* Title weight variations for visual hierarchy */
+.hero-title .title-heavy {
+  font-weight: 700;
+}
+
+.hero-title .title-light {
+  font-weight: 300;
 }
 
 .text-gradient {
@@ -392,24 +417,58 @@ a:hover {
   background-clip: text;
 }
 
+/* Improved body copy - left aligned with max width for readability */
 .hero-desc {
   font-size: 1.25rem;
   color: var(--text-secondary);
-  max-width: 600px;
+  max-width: 65ch;
   margin: 0 0 var(--space-xl);
   line-height: 1.7;
+  text-align: left;
 }
 
 .hero-actions {
   display: flex;
-  gap: var(--space-sm);
+  gap: var(--space-md);
   flex-wrap: wrap;
+  align-items: center;
+}
+
+/* Sub-header letter spacing for engineered look */
+.section-tag,
+.hero-badge,
+.tech-badge,
+.btn {
+  letter-spacing: 0.05em;
 }
 
 .hero-visual {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* Enhanced primary button with glow effect */
+.btn-primary {
+  background: linear-gradient(135deg, var(--accent-primary) 0%, #0596de 100%);
+  box-shadow: 0 4px 15px rgba(3, 116, 180, 0.35);
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  box-shadow: 0 6px 25px rgba(3, 116, 180, 0.5);
+  transform: translateY(-2px);
+}
+
+/* Secondary button refinement */
+.btn-secondary {
+  background: transparent;
+  border: 2px solid var(--accent-primary);
+  color: var(--accent-primary);
+}
+
+.btn-secondary:hover {
+  background: rgba(3, 116, 180, 0.1);
 }
 
 .product-card {
@@ -1424,18 +1483,27 @@ section {
   color: var(--text-primary);
 }
 
-/* Tech badges */
+/* Tech badges - improved spacing */
 .tech-badges {
   display: flex;
-  gap: 1rem;
-  justify-content: center;
+  gap: 1.5rem;
+  justify-content: flex-start;
   flex-wrap: wrap;
-  margin-top: 2rem;
+  margin-top: 2.5rem;
 }
 
 .tech-badge {
   display: inline-flex;
   align-items: center;
+  gap: 0.5rem;
+}
+
+.tech-badge span {
+  padding: 0.35rem 0.85rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
 }
 
 /* Features section */
