@@ -12,7 +12,7 @@
   <meta property="og:url" content="https://astrocytech.github.io/glyphser.html">
   <meta property="og:title" content="Glyphser - Deterministic ML Execution">
   <meta property="og:description" content="Glyphser is Astrocytech's deterministic runtime specification and conformance toolkit for verifiable machine learning execution.">
-  <meta property="og:image" content="https://astrocytech.github.io/files/home-hero@2x.png">
+  <meta property="og:image" content="https://astrocytech.github.io/files/home-hero@2x.webp">
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
@@ -40,6 +40,9 @@
     "codeRepository": "https://github.com/Astrocytech/Glyphser"
   }
   </script>
+  
+  <!-- Content Security Policy -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https:;">
   
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -92,7 +95,7 @@
 
 
   <!-- Hero Section -->
-  <section id="main-content" class="hero" style="background-image: url('files/home-hero@2x.png'); background-position: center center; background-repeat: no-repeat; background-size: cover; background-color: #e5f1f9;">
+  <section id="main-content" class="hero" style="background-image: url('files/home-hero@2x.webp'); background-position: center center; background-repeat: no-repeat; background-size: cover; background-color: #e5f1f9;">
     <div class="hero-bg"></div>
     <div class="hero-decor hero-decor-1"></div>
     <div class="hero-decor hero-decor-2"></div>
@@ -125,18 +128,6 @@
           </svg>
           GitHub
         </a>
-      </div>
-      <!-- Tech Stack Badges -->
-      <div class="tech-badges" style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem;">
-        <span class="tech-badge">
-          <span style="background: #3776AB; color: white; padding: 0.25rem 0.75rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">Python 88.6%</span>
-        </span>
-        <span class="tech-badge">
-          <span style="background: #3178C6; color: white; padding: 0.25rem 0.75rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">TypeScript 9.7%</span>
-        </span>
-        <span class="tech-badge">
-          <span style="background: #2ecc71; color: white; padding: 0.25rem 0.75rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">AGPL-3.0</span>
-        </span>
       </div>
     </div>
   </section>
@@ -591,11 +582,38 @@ npm run dev
       });
     });
 
-    // Mobile menu toggle
+    // Mobile menu toggle with focus trap and keyboard support
     const menuBtn = document.querySelector('.mobile-menu-btn');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const mobileMenuLinks = mobileMenu.querySelectorAll('a, button');
+    const firstMenuItem = mobileMenuLinks[0];
+    const lastMenuItem = mobileMenuLinks[mobileMenuLinks.length - 1];
+    
     menuBtn.addEventListener('click', () => {
       const isOpen = document.body.classList.toggle('menu-open');
       menuBtn.setAttribute('aria-expanded', isOpen);
+      if (isOpen) {
+        firstMenuItem.focus();
+      }
+    });
+    
+    // Focus trap for mobile menu
+    mobileMenu.addEventListener('keydown', (e) => {
+      if (e.key === 'Tab') {
+        if (e.shiftKey && document.activeElement === firstMenuItem) {
+          e.preventDefault();
+          lastMenuItem.focus();
+        } else if (!e.shiftKey && document.activeElement === lastMenuItem) {
+          e.preventDefault();
+          firstMenuItem.focus();
+        }
+      }
+      // Close on Escape
+      if (e.key === 'Escape') {
+        document.body.classList.remove('menu-open');
+        menuBtn.setAttribute('aria-expanded', 'false');
+        menuBtn.focus();
+      }
     });
 
     // Logo click handler - logo is within nav-logo anchor

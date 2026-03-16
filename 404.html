@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - Page Not Found | Astrocytech</title>
+  <meta name="description" content="The page you're looking for doesn't exist.">
+  <link rel="canonical" href="https://astrocytech.github.io/404.html">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="files/favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="files/favicon_io/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="files/favicon_io/apple-touch-icon.png">
+  <link rel="manifest" href="files/favicon_io/site.webmanifest">
+  
+  <!-- CSP -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https:;">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Sora:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --primary: #0374b4;
+      --primary-dark: #025a8c;
+      --accent: #00b894;
+      --text: #1a1a2e;
+      --text-light: #4a4a68;
+      --bg: #ffffff;
+      --bg-alt: #f8f9fa;
+      --border: #e0e0e0;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    a {
+      color: var(--primary);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    
+    a:hover {
+      color: var(--primary-dark);
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+    
+    header {
+      padding: 1.5rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo {
+      font-family: 'Sora', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .logo-icon {
+      width: 32px;
+      height: 32px;
+    }
+    
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+    }
+    
+    nav a {
+      color: var(--text);
+      font-weight: 500;
+    }
+    
+    nav a:hover {
+      color: var(--primary);
+    }
+    
+    nav a.active {
+      color: var(--primary);
+    }
+    
+    main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 4rem 1.5rem;
+      text-align: center;
+    }
+    
+    .error-code {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 8rem;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1;
+      margin-bottom: 1rem;
+    }
+    
+    h1 {
+      font-family: 'Sora', sans-serif;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    
+    p {
+      color: var(--text-light);
+      font-size: 1.125rem;
+      margin-bottom: 2rem;
+    }
+    
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.875rem 1.75rem;
+      background: var(--primary);
+      color: white;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+    
+    .btn:hover {
+      background: var(--primary-dark);
+      color: white;
+      transform: translateY(-2px);
+    }
+    
+    footer {
+      padding: 1.5rem 0;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.875rem;
+    }
+    
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+      }
+      
+      .error-code {
+        font-size: 5rem;
+      }
+      
+      h1 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container header-inner">
+      <a href="/" class="logo">
+        <svg class="logo-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="16" cy="16" r="14" stroke="#0374b4" stroke-width="2"/>
+          <path d="M10 16L14 20L22 12" stroke="#0374b4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Astrocytech
+      </a>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/glyphser.html">Glyphser</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  <main>
+    <div class="container">
+      <div class="error-code">404</div>
+      <h1>Page Not Found</h1>
+      <p>The page you're looking for doesn't exist or has been moved.</p>
+      <a href="/" class="btn">← Back to Home</a>
+    </div>
+  </main>
+  
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Astrocytech. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
