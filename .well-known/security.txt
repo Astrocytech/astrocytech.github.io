@@ -1,0 +1,9 @@
+# Security contact information
+# https://securitytxt.org/
+
+Contact: mailto:hello@astrocytech.com
+Expires: 2027-12-31T23:59:59.000Z
+Encryption: https://keys.openpgp.org/vks/v1/by-fingerprint/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+Preferred-Languages: en
+Canonical: https://astrocytech.github.io/.well-known/security.txt
+Policy: https://github.com/Astrocytech/Glyphser/security/policy

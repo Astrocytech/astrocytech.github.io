@@ -39,6 +39,22 @@
   }
   </script>
   
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://astrocytech.github.io/"
+      }
+    ]
+  }
+  </script>
+  
   <!-- FAQ Structured Data -->
   <script type="application/ld+json">
   {
@@ -64,6 +80,36 @@
         "@type": "Question",
         "name": "Is Glyphser open source?",
         "answer": "Yes, Glyphser is open source under the AGPL-3.0 license, allowing for free use, modification, and distribution."
+      }
+    ]
+  }
+  </script>
+  
+  <!-- HowTo Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Verify Your ML Pipeline with Glyphser",
+    "description": "Learn how to ensure deterministic, verifiable machine learning execution using Glyphser.",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "name": "Define Your Pipeline",
+        "text": "Create a YAML manifest that specifies your ML pipeline, including data sources, model architecture, and execution parameters.",
+        "url": "https://astrocytech.github.io/glyphser.html#how-it-works"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Run & Verify",
+        "text": "Execute your pipeline using Glyphser's deterministic runtime, which captures all execution artifacts and checkpoints.",
+        "url": "https://astrocytech.github.io/glyphser.html#how-it-works"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Review Evidence",
+        "text": "Examine the generated conformance certificates and execution traces to verify bitwise reproducibility.",
+        "url": "https://astrocytech.github.io/glyphser.html#how-it-works"
       }
     ]
   }
