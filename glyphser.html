@@ -1,242 +1,328 @@
 <!DOCTYPE html>
-<html data-wf-page="glyphser" data-wf-site="62bc1260fe7b1f3d37a8ea01" class="w-mod-js">
-  <head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta charset="utf-8">
-    <title>Glyphser | Astrocytech</title>
-    <meta content="Glyphser | Astrocytech" name="description">
-    <meta content="Glyphser | Astrocytech" property="og:title">
-    <meta content="Glyphser | Astrocytech" property="twitter:title">
-    <meta property="og:type" content="website">
-    <meta content="summary_large_image" name="twitter:card">
-    <meta content="width=device-width, initial-scale=1" name="viewport">
-    <link href="files/az-vancouver.webflow.df6466573.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/" rel="preconnect">
-    <link href="https://fonts.gstatic.com/" rel="preconnect" crossorigin="anonymous">
-    <script src="files/webfont.js" type="text/javascript"></script>
-    <link rel="stylesheet" href="files/css.css" media="all">
-    <script type="text/javascript">WebFont.load({google:{families:["Space Grotesk:300,400,500,600,700","Manrope:300,400,500,600,700"]}});</script>
-    <link rel="apple-touch-icon" sizes="180x180" href="files/favicon_io/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="files/favicon_io/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="files/favicon_io/favicon-16x16.png">
-    <link rel="manifest" href="files/favicon_io/site.webmanifest">
-    <link rel="shortcut icon" href="files/favicon_io/favicon.ico">
-    <style>
-      .glyphser-feature-grid {
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        gap: 28px;
-        max-width: 980px;
-        margin: 0 auto;
-      }
-      .glyphser-feature-grid .content {
-        text-align: center;
-      }
-      .glyphser-logo-wrap {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 20px auto 10px;
-      }
-      .glyphser-logo-img {
-        width: min(520px, 85vw);
-        height: auto;
-      }
-    </style>
-  </head>
-  <body>
-    <div data-animation="default" class="navbar w-nav" data-easing2="ease" data-easing="ease" data-collapse="medium" role="banner" data-no-scroll="1" data-duration="500" data-doc-height="1" style="opacity: 1; will-change: background; background-color: rgb(0, 0, 0);">
-      <div class="container nav-container">
-        <div class="nav-menu-container">
-          <a href="index.html" class="brand w-nav-brand" aria-label="home"><img src="files/62bc142251c61c394c38cb19_Vancouver%20Logo.png" loading="lazy" alt="Astrocytech" class="brand"><span class="brand-text">Astrocytech</span></a>
-          <nav role="navigation" class="nav-menu w-nav-menu">
-            <div class="link-container">
-              <div class="nav-link">
-                <a href="index.html" class="link-block animation-01 w-inline-block">
-                  <div>Home</div>
-                  <div class="link-block-underline"></div>
-                </a>
-              </div>
-              <div class="nav-link">
-                <a href="glyphser.html" class="link-block animation-01 w-inline-block w--current">
-                  <div>Glyphser</div>
-                  <div class="link-block-underline"></div>
-                </a>
-              </div>
-              <div class="nav-link">
-                <a href="index.html#Help" class="link-block animation-01 w-inline-block">
-                  <div>Contact</div>
-                  <div class="link-block-underline"></div>
-                </a>
-              </div>
-            </div>
-          </nav>
-          <div class="menu-button w-nav-button" aria-label="menu" role="button" tabindex="0" aria-controls="w-nav-overlay-0" aria-haspopup="menu" aria-expanded="false">
-            <div class="center-box"><img src="files/62bc1260fe7b1f40dca8ea2b_menu.svg" loading="lazy" alt=""></div>
-          </div>
-        </div>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glyphser - Deterministic ML Execution | Astrocytech</title>
+  <meta name="description" content="Glyphser is Astrocytech's conformance-first runtime specification and tooling stack for reproducible, auditable ML execution.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="files/astrocytech.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">
+        <span class="logo-text">A(⋅)</span>
+        <span>Astrocytech</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="glyphser.html" class="active">Glyphser</a>
+        <a href="#contact">Contact</a>
       </div>
-      <div class="w-nav-overlay" data-wf-ignore="" id="w-nav-overlay-0"></div>
+      <a href="#contact" class="nav-cta">Get Started</a>
+      <button class="mobile-menu-btn" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
+  </nav>
 
-    <div class="section overflow-hidden">
-      <div class="container">
-        <div class="center-text">
-          <div class="hero-text-holder">
-            <div class="animate-on-load-1st">
-              <div class="hero-text"><span class="gradient-text">Glyphser</span> — deterministic, verifiable ML execution</div>
-            </div>
-            <div class="animate-on-load-2st">
-              <div class="paragraph-hero">
-                <p>Glyphser is Astrocytech’s conformance-first runtime specification and tooling stack. It enables reproducible, auditable ML execution across environments and hardware.</p>
-              </div>
-            </div>
-            <div class="animate-on-load-3rd">
-              <div class="hero-button-holder">
-                <a href="#Overview" class="gradient-link w-inline-block">
-                  <div class="link-gradient-text">Project Overview</div>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="logo-grid-holder" style="margin-top: 24px;">
-          <div class="glyphser-logo-wrap">
-            <img src="files/glyphser3.png" loading="lazy" alt="Glyphser logo" class="glyphser-logo-img">
-          </div>
-          <div class="fade-in-move-on-scroll" style="text-align: center;">
-            <p>Open-source, conformance-first, and built for deterministic verification.</p>
-          </div>
-        </div>
+  <!-- Mobile Menu -->
+  <div class="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="glyphser.html">Glyphser</a>
+    <a href="#contact">Contact</a>
+    <a href="#contact" class="btn btn-primary btn-full">Get Started</a>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-bg">
+      <div class="hero-gradient"></div>
+      <div class="hero-grid"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Open Source
+      </div>
+      <h1 class="hero-title">
+        Glyphser —<br>
+        <span class="text-gradient">Deterministic ML</span> Execution
+      </h1>
+      <p class="hero-desc">
+        Conformance-first runtime specification and tooling stack for reproducible, 
+        auditable machine learning execution across environments and hardware.
+      </p>
+      <div class="hero-actions">
+        <a href="#overview" class="btn btn-primary">
+          Learn More
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M3.5 8h9m-3-3l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+        <a href="https://github.com/Astrocytech/Glyphser" class="btn btn-secondary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+          </svg>
+          GitHub
+        </a>
       </div>
     </div>
+  </section>
 
-    <div id="Overview" class="section">
-      <div class="container _4em">
-        <div class="center-text">
-          <div class="fade-in-move-on-scroll">
-            <h1>What Glyphser Delivers</h1>
-          </div>
-          <div class="paragraph-hero">
-            <div class="fade-in-move-on-scroll">
-              <p>Glyphser defines deterministic execution profiles, canonical serialization rules, and a conformance harness that third parties can run to independently verify reproducibility.</p>
-            </div>
-          </div>
-        </div>
-        <div class="features-container">
-          <div class="w-layout-grid grid-6-col glyphser-feature-grid">
-            <div class="content">
-              <div class="fade-in-move-on-scroll">
-                <h2>Conformance-First Tooling</h2>
-              </div>
-              <div class="fade-in-move-on-scroll">
-                <p>Deterministic conformance checks produce stable PASS/FAIL outputs and reproducible hashes.</p>
-              </div>
-            </div>
-            <div class="content">
-              <div class="fade-in-move-on-scroll">
-                <h2>Deterministic Runtime Contracts</h2>
-              </div>
-              <div class="fade-in-move-on-scroll">
-                <p>Canonical CBOR, strict ordering, and explicit replay tokens provide verifiable invariants.</p>
-              </div>
-            </div>
-            <div class="content">
-              <div class="fade-in-move-on-scroll">
-                <h2>Verifier-Ready Evidence</h2>
-              </div>
-              <div class="fade-in-move-on-scroll">
-                <p>Trace hashes, checkpoints, and certificates are structured for independent verification and auditability.</p>
-              </div>
-            </div>
-          </div>
-        </div>
+  <!-- Glyphser Logo Section -->
+  <section class="logos">
+    <div class="section-inner" style="text-align: center;">
+      <div style="max-width: 600px; margin: 0 auto;">
+        <img src="files/glyphser3.png" alt="Glyphser" style="width: 100%; max-width: 500px; height: auto; border-radius: 16px;">
       </div>
+      <p class="logos-label" style="margin-top: 1.5rem;">Open-source, conformance-first, and built for deterministic verification.</p>
     </div>
+  </section>
 
-    <div class="section grey-section">
-      <div class="container _4em">
-        <div class="center-text">
-          <div class="fade-in-move-on-scroll">
-            <h1>Get the Project</h1>
-          </div>
-          <div class="paragraph-hero">
-            <div class="fade-in-move-on-scroll">
-              <p>The source code and conformance tooling are available on GitHub.</p>
-            </div>
-          </div>
-          <div class="hero-button-holder" style="margin-top: 16px;">
-            <a href="https://github.com/Astrocytech/Glyphser" class="gradient-link w-inline-block">
-              <div class="link-gradient-text">GitHub Repo</div>
-            </a>
-          </div>
-        </div>
+  <!-- Overview Section -->
+  <section id="overview" class="features">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="section-tag">Overview</span>
+        <h2 class="section-title">What Glyphser Delivers</h2>
+        <p class="section-desc">
+          Glyphser defines deterministic execution profiles, canonical serialization rules, 
+          and a conformance harness that third parties can run to independently verify reproducibility.
+        </p>
       </div>
-    </div>
-
-    <div id="Help" class="section">
-      <div class="container _4em">
-        <div class="quick-access">
-          <div class="quick-access-grid">
-            <a href="mailto:info@astrocytech.com" class="quick-access-card-holder w-inline-block">
-              <div class="quick-access-card">
-                <h1>Contact</h1>
-                <p>info@astrocytech.com</p>
-              </div>
-              <div class="arrow-holder-container"><img src="files/62bc2217d721c46bbe3ee164_Arrow%20Gradient.svg" loading="lazy" alt="" class="_100width"></div>
-              <div class="grey-border"></div>
-            </a>
-            <a href="mailto:admin@astrocytech.com" class="quick-access-card-holder w-inline-block">
-              <div class="quick-access-card">
-                <h1>Admin</h1>
-                <p>admin@astrocytech.com</p>
-              </div>
-              <div class="arrow-holder-container"><img src="files/62bc2217d721c46bbe3ee164_Arrow%20Gradient.svg" loading="lazy" alt="" class="_100width"></div>
-              <div class="grey-border"></div>
-            </a>
+      
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
           </div>
+          <h3>Conformance-First Tooling</h3>
+          <p>Deterministic conformance checks produce stable PASS/FAIL outputs and reproducible hashes.</p>
         </div>
-      </div>
-    </div>
-
-    <div class="footer">
-      <div class="footer-flex-container">
         
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+            </svg>
+          </div>
+          <h3>Deterministic Runtime Contracts</h3>
+          <p>Canonical CBOR, strict ordering, and explicit replay tokens provide verifiable invariants.</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>
+            </svg>
+          </div>
+          <h3>Verifier-Ready Evidence</h3>
+          <p>Trace hashes, checkpoints, and certificates are structured for independent verification and auditability.</p>
+        </div>
       </div>
-      <div class="footer-line"></div>
-      <div class="copy-right-section"></div>
     </div>
+  </section>
 
-    <script src="files/jquery-3.5.1.min.dc5e7f18c8.js" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-    <script src="files/webflow.88c0ebf46.js" type="text/javascript"></script>
-    <script type="text/javascript">
-      (function () {
-        function setActiveNav() {
-          var links = document.querySelectorAll(".nav-menu .link-block");
-          links.forEach(function (link) {
-            link.classList.remove("is-active");
-          });
-          var hash = window.location.hash;
-          if (hash) {
-            var match = document.querySelector('.nav-menu .link-block[href="' + hash + '"]');
-            if (match) {
-              match.classList.add("is-active");
-              return;
-            }
-          }
-          var glyphserLink = document.querySelector('.nav-menu .link-block[href="glyphser.html"]');
-          if (glyphserLink) {
-            glyphserLink.classList.add("is-active");
-          }
+  <!-- Code Section -->
+  <section class="glyphser">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="section-tag">Configuration</span>
+        <h2 class="section-title">Simple, Declarative Config</h2>
+        <p class="section-desc">
+          Define your runtime requirements with a simple YAML configuration. 
+          Glyphser handles the rest.
+        </p>
+      </div>
+      
+      <div class="glyphser-card">
+        <div class="code-header">
+          <div class="code-dots">
+            <span></span><span></span><span></span>
+          </div>
+          <span class="code-title">glyphser.yaml</span>
+        </div>
+        <pre class="code-block"><code><span class="code-keyword">runtime</span>:
+  <span class="code-property">version</span>: <span class="code-string">"2.1.0"</span>
+  <span class="code-property">deterministic</span>: <span class="codeBoolean">true</span>
+  <span class="code-property">verification</span>:
+    <span class="code-property">enabled</span>: <span class="codeBoolean">true</span>
+    <span class="code-property">mode</span>: <span class="codeString">"strict"</span>
+
+<span class="code-keyword">pipeline</span>:
+  <span class="code-property">name</span>: <span class="code-string">"production-ml"</span>
+  <span class="code-property">reproducible</span>: <span class="codeBoolean">true</span>
+  <span class="code-property">audit</span>: <span class="codeBoolean">true</span>
+  <span class="code-property">hash</span>: <span class="codeString">"sha256"</span></code></pre>
+        <div class="glyphser-actions">
+          <a href="https://github.com/Astrocytech/Glyphser" class="btn btn-primary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+            </svg>
+            View on GitHub
+          </a>
+          <a href="#" class="btn btn-ghost">Read Documentation</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta">
+    <div class="section-inner">
+      <div class="cta-card">
+        <div class="cta-content">
+          <h2>Ready to get started?</h2>
+          <p>Try Glyphser in your project today. Open source and free to use.</p>
+        </div>
+        <div class="cta-actions">
+          <a href="https://github.com/Astrocytech/Glyphser" class="btn btn-white">GitHub Repo</a>
+          <a href="#contact" class="btn btn-ghost-white">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="section-inner">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h2>Get in touch</h2>
+          <p>Have questions about Glyphser? Want to contribute? We'd love to hear from you.</p>
+          
+          <div class="contact-links">
+            <a href="mailto:info@astrocytech.com" class="contact-link">
+              <span class="contact-label">General Inquiries</span>
+              <span class="contact-value">info@astrocytech.com</span>
+            </a>
+            <a href="mailto:admin@astrocytech.com" class="contact-link">
+              <span class="contact-label">Admin</span>
+              <span class="contact-value">admin@astrocytech.com</span>
+            </a>
+          </div>
+        </div>
+        
+        <div class="contact-form-wrapper">
+          <form class="contact-form" onsubmit="event.preventDefault(); alert('Thanks for reaching out! We\'ll be in touch soon.');">
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" placeholder="you@company.com" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" rows="4" placeholder="Tell us about your project..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="nav-logo">
+            <span class="logo-text">A(⋅)</span>
+            <span>Astrocytech</span>
+          </a>
+          <p>Deterministic data infrastructure for the modern era.</p>
+          <div class="footer-social">
+            <a href="https://github.com/Astrocytech" aria-label="GitHub">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <h4>Product</h4>
+            <a href="index.html#features">Features</a>
+            <a href="glyphser.html">Glyphser</a>
+            <a href="#">Documentation</a>
+          </div>
+          <div class="footer-col">
+            <h4>Company</h4>
+            <a href="#contact">Contact</a>
+            <a href="#">Careers</a>
+          </div>
+          <div class="footer-col">
+            <h4>Legal</h4>
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Astrocytech. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
-        document.addEventListener("click", function (e) {
-          var link = e.target.closest(".nav-menu .link-block");
-          if (link) {
-            setTimeout(setActiveNav, 0);
-          }
-        });
-        window.addEventListener("hashchange", setActiveNav);
-        window.addEventListener("load", setActiveNav);
-      })();
-    </script>
-  </body>
+        document.body.classList.remove('menu-open');
+      });
+    });
+
+    // Nav scroll effect
+    const nav = document.querySelector('.nav');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
+      }
+    });
+
+    // Mobile menu toggle
+    const menuBtn = document.querySelector('.mobile-menu-btn');
+    menuBtn.addEventListener('click', () => {
+      document.body.classList.toggle('menu-open');
+    });
+
+    // Scroll reveal animation
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.feature-card, .section-header, .contact-grid, .cta-card, .glyphser-card').forEach(el => {
+      el.classList.add('reveal');
+      observer.observe(el);
+    });
+  </script>
+</body>
 </html>
