@@ -487,7 +487,7 @@ npm run dev
         </div>
         
         <div class="contact-form-wrapper">
-          <form class="contact-form" onsubmit="event.preventDefault(); alert('Thanks for reaching out! We\'ll be in touch soon.');">
+          <form class="contact-form" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Message Sent!'; this.reset();">
             <div class="form-group">
               <label for="email">Email</label>
               <input type="email" id="email" placeholder="you@company.com" required>
@@ -545,7 +545,7 @@ npm run dev
           <div class="newsletter">
             <h4>Subscribe to our newsletter</h4>
             <p>Get the latest updates on deterministic ML.</p>
-            <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thanks for subscribing!');">
+            <form class="newsletter-form" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Subscribed!'; this.querySelector('input').value='';">
               <input type="email" placeholder="Enter your email" required>
               <button type="submit" class="btn btn-primary">Subscribe</button>
             </form>
