@@ -4,21 +4,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Glyphser - Deterministic ML Execution | Astrocytech</title>
-  <meta name="description" content="Glyphser is Astrocytech's conformance-first runtime specification and tooling stack for reproducible, auditable ML execution.">
+  <meta name="description" content="Glyphser is Astrocytech's deterministic runtime specification and conformance toolkit for verifiable machine learning execution.">
+  <style>
+    html, body { background-color: #050507 !important; }
+    body { opacity: 0; transition: opacity 0.3s ease; }
+    body.loaded { opacity: 1; }
+  </style>
   
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
   
   <!-- Styles -->
   <link rel="stylesheet" href="files/astrocytech.css">
 </head>
-<body>
+<body onload="document.body.classList.add('loaded')">
   <!-- Navigation -->
   <nav class="nav">
     <div class="nav-inner">
-      <a href="/" class="nav-logo">
+      <a href="index.html" class="nav-logo">
         <span class="logo-text">A(⋅)</span>
         <span>Astrocytech</span>
       </a>
@@ -48,6 +53,11 @@
   <section class="hero">
     <div class="hero-bg">
       <div class="hero-gradient"></div>
+      <div class="hero-orbs">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+      </div>
       <div class="hero-grid"></div>
     </div>
     <div class="hero-content">
@@ -55,16 +65,18 @@
         <span class="badge-dot"></span>
         Open Source
       </div>
+      <div class="glyphser-logo-text" style="font-size: clamp(4rem, 12vw, 8rem); margin-bottom: 1rem;">𝒢⟦·⟧</div>
       <h1 class="hero-title">
-        Glyphser —<br>
-        <span class="text-gradient">Deterministic ML</span> Execution
+        Deterministic<br>
+        <span class="text-gradient">Verification Engine</span><br>
+        for ML Execution
       </h1>
       <p class="hero-desc">
-        Conformance-first runtime specification and tooling stack for reproducible, 
-        auditable machine learning execution across environments and hardware.
+        Glyphser provides a reproducible execution framework that produces verifiable artifacts for machine learning runs. 
+        Instead of relying on informal logs, Glyphser records structured execution traces, checkpoints, and certificates.
       </p>
       <div class="hero-actions">
-        <a href="#overview" class="btn btn-primary">
+        <a href="#concepts" class="btn btn-primary">
           Learn More
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
             <path d="M3.5 8h9m-3-3l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -77,28 +89,30 @@
           GitHub
         </a>
       </div>
-    </div>
-  </section>
-
-  <!-- Glyphser Logo Section -->
-  <section class="logos">
-    <div class="section-inner" style="text-align: center;">
-      <div style="max-width: 600px; margin: 0 auto;">
-        <img src="files/glyphser3.png" alt="Glyphser" style="width: 100%; max-width: 500px; height: auto; border-radius: 16px;">
+      <!-- Tech Stack Badges -->
+      <div class="tech-badges" style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem; opacity: 0; animation: fadeInUp 0.6s ease 0.5s forwards;">
+        <span class="tech-badge">
+          <span style="background: #3776AB; color: white; padding: 0.25rem 0.75rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">Python 88.6%</span>
+        </span>
+        <span class="tech-badge">
+          <span style="background: #3178C6; color: white; padding: 0.25rem 0.75rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">TypeScript 9.7%</span>
+        </span>
+        <span class="tech-badge">
+          <span style="background: #2ecc71; color: white; padding: 0.25rem 0.75rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">AGPL-3.0</span>
+        </span>
       </div>
-      <p class="logos-label" style="margin-top: 1.5rem;">Open-source, conformance-first, and built for deterministic verification.</p>
     </div>
   </section>
 
-  <!-- Overview Section -->
-  <section id="overview" class="features">
+  <!-- Why Glyphser Section -->
+  <section class="features">
     <div class="section-inner">
       <div class="section-header">
-        <span class="section-tag">Overview</span>
-        <h2 class="section-title">What Glyphser Delivers</h2>
+        <span class="section-tag">Why Glyphser</span>
+        <h2 class="section-title">The Problem with<br>ML Reproducibility</h2>
         <p class="section-desc">
-          Glyphser defines deterministic execution profiles, canonical serialization rules, 
-          and a conformance harness that third parties can run to independently verify reproducibility.
+          Machine learning systems often suffer from weak reproducibility. Glyphser addresses this with 
+          cryptographically bound artifacts that allow independent verification.
         </p>
       </div>
       
@@ -106,11 +120,56 @@
         <div class="feature-card">
           <div class="feature-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              <path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
             </svg>
           </div>
-          <h3>Conformance-First Tooling</h3>
-          <p>Deterministic conformance checks produce stable PASS/FAIL outputs and reproducible hashes.</p>
+          <h3>Non-Deterministic Results</h3>
+          <p>Training runs cannot be reproduced exactly due to floating-point differences, random initialization, and environment variations.</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+            </svg>
+          </div>
+          <h3>Informal Logs</h3>
+          <p>Logs are often incomplete, unstructured, or lost, making it impossible to verify what actually happened during execution.</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+            </svg>
+          </div>
+          <h3>Trust Over Evidence</h3>
+          <p>Verification currently requires trusting the reporting party rather than providing cryptographic proof of execution integrity.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Concepts Section -->
+  <section id="concepts" class="glyphser">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="section-tag">Core Concepts</span>
+        <h2 class="section-title">How Glyphser Works</h2>
+        <p class="section-desc">
+          Glyphser introduces several core concepts that enable deterministic, verifiable ML execution.
+        </p>
+      </div>
+      
+      <div class="features-grid" style="grid-template-columns: repeat(2, 1fr); max-width: 900px; margin: 0 auto;">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+            </svg>
+          </div>
+          <h3>Run Manifest</h3>
+          <p>A formal declaration defining operators, parameters, inputs, and environment constraints. Acts as the contract for execution.</p>
         </div>
         
         <div class="feature-card">
@@ -119,32 +178,162 @@
               <path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
             </svg>
           </div>
-          <h3>Deterministic Runtime Contracts</h3>
-          <p>Canonical CBOR, strict ordering, and explicit replay tokens provide verifiable invariants.</p>
+          <h3>Deterministic Execution</h3>
+          <p>Stable serialization and hashing ensure identical runs produce identical commitments. No more "works on my machine."</p>
         </div>
         
         <div class="feature-card">
           <div class="feature-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>
+              <path d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
             </svg>
           </div>
-          <h3>Verifier-Ready Evidence</h3>
-          <p>Trace hashes, checkpoints, and certificates are structured for independent verification and auditability.</p>
+          <h3>Execution Artifacts</h3>
+          <p>Structured traces, checkpoints, and certificates that encode the complete history and state of the execution.</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3>Independent Verification</h3>
+          <p>Third parties can replay or inspect artifacts to confirm the run matches its declaration. No trust required.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Architecture Section -->
+  <section class="features">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="section-tag">Architecture</span>
+        <h2 class="section-title">High-Level System<br>Design</h2>
+        <p class="section-desc">
+          Glyphser operates as a deterministic execution and verification layer with several key components.
+        </p>
+      </div>
+      
+      <!-- Architecture Flow -->
+      <div class="architecture-flow" style="display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 1rem; margin: 3rem 0;">
+        <div class="arch-item" style="background: var(--bg-card); border: 1px solid var(--border); padding: 1rem 1.5rem; border-radius: 12px; text-align: center;">
+          <span style="font-weight: 600; color: var(--accent-secondary);">Manifest</span>
+        </div>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5l7 7-7 7"/></svg>
+        <div class="arch-item" style="background: var(--bg-card); border: 1px solid var(--border); padding: 1rem 1.5rem; border-radius: 12px; text-align: center;">
+          <span style="font-weight: 600; color: var(--accent-secondary);">Operator Registry</span>
+        </div>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5l7 7-7 7"/></svg>
+        <div class="arch-item" style="background: var(--bg-card); border: 1px solid var(--border); padding: 1rem 1.5rem; border-radius: 12px; text-align: center;">
+          <span style="font-weight: 600; color: var(--accent-secondary);">Runtime</span>
+        </div>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5l7 7-7 7"/></svg>
+        <div class="arch-item" style="background: var(--bg-card); border: 1px solid var(--border); padding: 1rem 1.5rem; border-radius: 12px; text-align: center;">
+          <span style="font-weight: 600; color: var(--accent-secondary);">Artifacts</span>
+        </div>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5l7 7-7 7"/></svg>
+        <div class="arch-item" style="background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary)); padding: 1rem 1.5rem; border-radius: 12px; text-align: center;">
+          <span style="font-weight: 700; color: white;">Verification</span>
+        </div>
+      </div>
+      
+      <!-- Architecture Components -->
+      <div class="features-grid" style="grid-template-columns: repeat(4, 1fr);">
+        <div class="feature-card">
+          <h3>Run Manifest</h3>
+          <p style="font-size: 0.875rem;">Formal declaration of operators, parameters, and environment constraints.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Operator Registry</h3>
+          <p style="font-size: 0.875rem;">Manages available operators and their deterministic implementations.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Serialization Layer</h3>
+          <p style="font-size: 0.875rem;">Canonical CBOR encoding with strict ordering and explicit replay tokens.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Verification Tools</h3>
+          <p style="font-size: 0.875rem;">Independent tools to replay and verify execution artifacts.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Use Cases Section -->
+  <section class="glyphser">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="section-tag">Use Cases</span>
+        <h2 class="section-title">Where Glyphser<br>Excels</h2>
+        <p class="section-desc">
+          Glyphser is designed for environments where reproducibility and verification are critical.
+        </p>
+      </div>
+      
+      <div class="features-grid" style="grid-template-columns: repeat(3, 1fr);">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+            </svg>
+          </div>
+          <h3>Reproducible Research</h3>
+          <p>Enable truly reproducible ML research with cryptographic verification of experimental results.</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+            </svg>
+          </div>
+          <h3>Regulated AI Workflows</h3>
+          <p>Meet compliance requirements with audit-ready ML pipelines and verifiable outputs.</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+            </svg>
+          </div>
+          <h3>Audit-Ready Pipelines</h3>
+          <p>Generate certificates and traces that can be independently verified for any audit.</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <h3>Experiment Tracking</h3>
+          <p>Replace informal logging with deterministic, inspectable experiment records.</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+            </svg>
+          </div>
+          <h3>CI Reproducibility</h3>
+          <p>Validate that CI runs produce consistent results across any environment.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Code Section -->
-  <section class="glyphser">
+  <section class="features">
     <div class="section-inner">
       <div class="section-header">
-        <span class="section-tag">Configuration</span>
-        <h2 class="section-title">Simple, Declarative Config</h2>
+        <span class="section-tag">Example</span>
+        <h2 class="section-title">Simple YAML Manifest</h2>
         <p class="section-desc">
-          Define your runtime requirements with a simple YAML configuration. 
-          Glyphser handles the rest.
+          Define your execution with a declarative YAML manifest. Glyphser handles the rest.
         </p>
       </div>
       
@@ -153,20 +342,24 @@
           <div class="code-dots">
             <span></span><span></span><span></span>
           </div>
-          <span class="code-title">glyphser.yaml</span>
+          <span class="code-title">manifest.yaml</span>
         </div>
-        <pre class="code-block"><code><span class="code-keyword">runtime</span>:
-  <span class="code-property">version</span>: <span class="code-string">"2.1.0"</span>
-  <span class="code-property">deterministic</span>: <span class="codeBoolean">true</span>
-  <span class="code-property">verification</span>:
-    <span class="code-property">enabled</span>: <span class="codeBoolean">true</span>
-    <span class="code-property">mode</span>: <span class="codeString">"strict"</span>
+        <pre class="code-block"><code><span class="code-keyword">run</span>:
+  <span class="code-property">name</span>: <span class="code-string">"example_run"</span>
 
-<span class="code-keyword">pipeline</span>:
-  <span class="code-property">name</span>: <span class="code-string">"production-ml"</span>
-  <span class="code-property">reproducible</span>: <span class="codeBoolean">true</span>
-  <span class="code-property">audit</span>: <span class="codeBoolean">true</span>
-  <span class="code-property">hash</span>: <span class="codeString">"sha256"</span></code></pre>
+<span class="code-keyword">operators</span>:
+  - <span class="code-property">id</span>: <span class="code-string">"preprocess"</span>
+    <span class="code-property">type</span>: <span class="code-string">"preprocessing_step"</span>
+
+  - <span class="code-property">id</span>: <span class="code-string">"train"</span>
+    <span class="code-property">type</span>: <span class="code-string">"training_step"</span>
+    <span class="code-property">params</span>:
+      <span class="code-property">epochs</span>: <span class="codeBoolean">100</span>
+      <span class="code-property">lr</span>: <span class="codeString">"0.001"</span>
+
+<span class="code-keyword">environment</span>:
+  <span class="code-property">python</span>: <span class="codeString">">=3.9"</span>
+  <span class="code-property">deterministic</span>: <span class="codeBoolean">true</span></code></pre>
         <div class="glyphser-actions">
           <a href="https://github.com/Astrocytech/Glyphser" class="btn btn-primary">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
@@ -180,13 +373,48 @@
     </div>
   </section>
 
+  <!-- Installation Section -->
+  <section class="glyphser">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="section-tag">Get Started</span>
+        <h2 class="section-title">Install & Run</h2>
+        <p class="section-desc">
+          Get Glyphser up and running in minutes.
+        </p>
+      </div>
+      
+      <div class="features-grid" style="grid-template-columns: repeat(3, 1fr); max-width: 1100px; margin: 0 auto;">
+        <div class="feature-card">
+          <h3>Install from Source</h3>
+          <pre style="background: var(--bg-primary); padding: 1rem; border-radius: 8px; overflow-x: auto; font-family: 'JetBrains Mono', monospace; font-size: 0.8125rem;"><code>git clone https://github.com/Astrocytech/Glyphser.git
+cd Glyphser
+pip install -e .</code></pre>
+        </div>
+        <div class="feature-card">
+          <h3>Run with FastAPI</h3>
+          <pre style="background: var(--bg-primary); padding: 1rem; border-radius: 8px; overflow-x: auto; font-family: 'JetBrains Mono', monospace; font-size: 0.8125rem;"><code>pip install -e ".[api]"
+glyphser-api
+# Default: 127.0.0.1:8000</code></pre>
+        </div>
+        <div class="feature-card">
+          <h3>React Frontend</h3>
+          <pre style="background: var(--bg-primary); padding: 1rem; border-radius: 8px; overflow-x: auto; font-family: 'JetBrains Mono', monospace; font-size: 0.8125rem;"><code>cd apps/web
+npm install
+npm run dev
+# Open: http://localhost:5173</code></pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- CTA Section -->
   <section class="cta">
     <div class="section-inner">
       <div class="cta-card">
         <div class="cta-content">
-          <h2>Ready to get started?</h2>
-          <p>Try Glyphser in your project today. Open source and free to use.</p>
+          <h2>Ready to verify your ML?</h2>
+          <p>Start with Glyphser today and make your machine learning runs deterministic and verifiable.</p>
         </div>
         <div class="cta-actions">
           <a href="https://github.com/Astrocytech/Glyphser" class="btn btn-white">GitHub Repo</a>
@@ -238,7 +466,7 @@
     <div class="footer-inner">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="/" class="nav-logo">
+          <a href="index.html" class="nav-logo">
             <span class="logo-text">A(⋅)</span>
             <span>Astrocytech</span>
           </a>
