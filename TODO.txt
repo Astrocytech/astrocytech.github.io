@@ -1,0 +1,35 @@
+# TODO - Human Assistance Required
+
+## Completed Fixes
+- JavaScript errors (getElementById 'logo-link') - FIXED
+- Missing button type attributes - FIXED
+- Raw & characters encoded - FIXED
+- Navigation links between pages - FIXED
+- Font consistency between pages - FIXED
+- SEO meta tags (canonical, Open Graph, Twitter Cards) - FIXED
+- Accessibility (skip links, ARIA attributes) - FIXED
+- Forms with proper validation - FIXED
+- Favicon manifest - FIXED
+- JSON-LD structured data for SEO - FIXED
+
+## Remaining Items (Code Style Only - Non-Breaking)
+These are validator style preferences, not bugs:
+1. Trailing whitespace (54 instances) - cosmetic only
+2. Inline styles (11+ instances) - intentional for hero backgrounds
+
+## Could Be Improved (Not Critical)
+1. Remove unused files in /old_data/ directory (webflow artifacts)
+2. Consider adding favicon.ico for older browsers
+3. Consider adding a 404.html page
+4. Optimize hero image (currently 1.5MB)
+5. Replace placeholder alert() calls with actual form handling
+
+## External Resources
+- Google Fonts (Sora, Outfit, JetBrains Mono) - working (HTTP 200)
+- GitHub links - verified working
+- Hero image - verified exists (1.5MB)
+- Custom domain: astrocytech.com (CNAME configured)
+
+## New Files Added
+- robots.txt - Search engine directives
+- sitemap.xml - Search engine sitemap
