@@ -44,9 +44,15 @@
   <!-- Content Security Policy -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https:;">
   
+  <!-- Security Headers -->
+  <meta http-equiv="X-Frame-Options" content="DENY">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap">
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
   
   <!-- Styles -->
@@ -537,7 +543,8 @@ npm run dev
             <h4>Subscribe to our newsletter</h4>
             <p>Get the latest updates on deterministic ML.</p>
             <form class="newsletter-form" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Subscribed!'; this.querySelector('input').value='';">
-              <input type="email" placeholder="Enter your email" required>
+              <label for="newsletter-email-glyphser" class="visually-hidden">Email address</label>
+              <input type="email" id="newsletter-email-glyphser" placeholder="Enter your email" required>
               <button type="submit" class="btn btn-primary">Subscribe</button>
             </form>
           </div>
@@ -625,6 +632,17 @@ npm run dev
         }
       });
     });
+  </script>
+  <noscript>
+    <style>
+      .mobile-menu { display: none; }
+      .mobile-menu.active { display: block; }
+    </style>
+  </noscript>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js').catch(err => console.log('SW registration failed:', err));
+    }
   </script>
 </body>
 </html>
