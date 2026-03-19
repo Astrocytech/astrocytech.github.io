@@ -1781,6 +1781,13 @@ section {
   gap: var(--space-lg);
 }
 
+.install-grid {
+  grid-template-columns: repeat(3, minmax(0, 340px));
+  justify-content: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
 .feature-card {
   padding: var(--space-xl);
   background: var(--bg-card);

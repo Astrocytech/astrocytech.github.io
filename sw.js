@@ -1,4 +1,4 @@
-const CACHE_NAME = 'astrocytech-v2';
+const CACHE_NAME = 'astrocytech-v3';
 const urlsToCache = [
   '/',
   '/index.html',
@@ -7,6 +7,7 @@ const urlsToCache = [
   '/files/astrocytech.css',
   '/files/home-hero@2x.webp',
   '/files/glyphser/glyphser-dashboard-light.webp',
+  '/files/glyphser/glyphser-dashboard-hero-light.webp',
   '/files/glyphser/glyphser-runs-light.webp',
   '/files/glyphser/glyphser-run-detail-light.webp',
   '/files/glyphser/glyphser-certification-light.webp',
