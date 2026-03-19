@@ -7,14 +7,34 @@
   <meta name="description" content="The page you're looking for doesn't exist.">
   <link rel="canonical" href="https://astrocytech.github.io/404.html">
   
-  <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="files/favicon_io/favicon.ico">
-  <link rel="icon" type="image/png" sizes="32x32" href="files/favicon_io/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="files/favicon_io/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="files/favicon_io/apple-touch-icon.png">
-  <link rel="manifest" href="files/favicon_io/site.webmanifest">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://astrocytech.github.io/404.html">
+  <meta property="og:title" content="404 - Page Not Found | Astrocytech">
+  <meta property="og:description" content="The page you're looking for doesn't exist.">
+  <meta property="og:image" content="https://astrocytech.github.io/files/home-hero@2x.webp">
   
-  <!-- CSP -->
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="404 - Page Not Found | Astrocytech">
+  <meta name="twitter:description" content="The page you're looking for doesn't exist.">
+  
+  <!-- Theme Color -->
+  <meta name="theme-color" content="#0374b4">
+  
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Astrocytech",
+    "url": "https://astrocytech.github.io/",
+    "logo": "https://astrocytech.github.io/files/favicon_io/favicon-32x32.png",
+    "description": "Astrocytech delivers verifiable data processing, reproducible pipelines, and operational clarity."
+  }
+  </script>
+  
+  <!-- Content Security Policy -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https:;">
   
   <!-- Security Headers -->
@@ -25,206 +45,75 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Sora:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Sora:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
   
-  <style>
-    :root {
-      --primary: #0374b4;
-      --primary-dark: #025a8c;
-      --accent: #00b894;
-      --text: #1a1a2e;
-      --text-light: #4a4a68;
-      --bg: #ffffff;
-      --bg-alt: #f8f9fa;
-      --border: #e0e0e0;
-    }
-    
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    
-    body {
-      font-family: 'Outfit', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-    
-    a {
-      color: var(--primary);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-    
-    a:hover {
-      color: var(--primary-dark);
-    }
-    
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 1.5rem;
-    }
-    
-    header {
-      padding: 1.5rem 0;
-      border-bottom: 1px solid var(--border);
-    }
-    
-    .header-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    
-    .logo {
-      font-family: 'Sora', sans-serif;
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: var(--primary);
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-    
-    .logo-icon {
-      width: 32px;
-      height: 32px;
-    }
-    
-    nav ul {
-      display: flex;
-      list-style: none;
-      gap: 2rem;
-    }
-    
-    nav a {
-      color: var(--text);
-      font-weight: 500;
-    }
-    
-    nav a:hover {
-      color: var(--primary);
-    }
-    
-    nav a.active {
-      color: var(--primary);
-    }
-    
-    main {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 4rem 1.5rem;
-      text-align: center;
-    }
-    
-    .error-code {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 8rem;
-      font-weight: 700;
-      color: var(--primary);
-      line-height: 1;
-      margin-bottom: 1rem;
-    }
-    
-    h1 {
-      font-family: 'Sora', sans-serif;
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-    
-    p {
-      color: var(--text-light);
-      font-size: 1.125rem;
-      margin-bottom: 2rem;
-    }
-    
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.875rem 1.75rem;
-      background: var(--primary);
-      color: white;
-      border-radius: 8px;
-      font-weight: 600;
-      transition: all 0.2s;
-    }
-    
-    .btn:hover {
-      background: var(--primary-dark);
-      color: white;
-      transform: translateY(-2px);
-    }
-    
-    footer {
-      padding: 1.5rem 0;
-      border-top: 1px solid var(--border);
-      text-align: center;
-      color: var(--text-light);
-      font-size: 0.875rem;
-    }
-    
-    @media (max-width: 768px) {
-      nav {
-        display: none;
-      }
-      
-      .error-code {
-        font-size: 5rem;
-      }
-      
-      h1 {
-        font-size: 1.5rem;
-      }
-    }
-  </style>
+  <!-- Styles -->
+  <link rel="stylesheet" href="files/astrocytech.css">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="files/favicon_io/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="files/favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="files/favicon_io/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="files/favicon_io/apple-touch-icon.png">
+  <link rel="manifest" href="files/favicon_io/site.webmanifest">
 </head>
 <body>
-  <header>
-    <div class="container header-inner">
-      <a href="/" class="logo">
-        <svg class="logo-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="16" cy="16" r="14" stroke="#0374b4" stroke-width="2"/>
-          <path d="M10 16L14 20L22 12" stroke="#0374b4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-        Astrocytech
-      </a>
-      <nav>
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/glyphser.html">Glyphser</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
   
-  <main>
-    <div class="container">
-      <div class="error-code">404</div>
-      <h1>Page Not Found</h1>
-      <p>The page you're looking for doesn't exist or has been moved.</p>
-      <a href="/" class="btn">← Back to Home</a>
+  <!-- Navigation -->
+  <nav class="nav" aria-label="Main navigation">
+    <div class="nav-inner" style="justify-content: center;">
+      <a href="index.html" class="nav-logo" style="pointer-events:auto !important; z-index:9999 !important; position:relative !important;">
+        <span class="logo-text">A(⋅)</span>
+        <span>Astrocytech</span>
+      </a>
+    </div>
+  </nav>
+  
+  <main id="main-content" style="flex: 1; display: flex; align-items: center; justify-content: center; padding: 200px 2rem 4rem; text-align: center;">
+    <div class="section-inner" style="max-width: 600px;">
+      <div class="error-code" style="font-family: 'JetBrains Mono', monospace; font-size: 8rem; font-weight: 700; color: var(--accent-primary); line-height: 1; margin-bottom: 1rem;">404</div>
+      <h1 style="margin-bottom: 1rem;">Page Not Found</h1>
+      <p style="color: var(--text-secondary); font-size: 1.125rem; margin-bottom: 2rem;">The page you're looking for doesn't exist or has been moved.</p>
+      <a href="index.html" class="btn btn-primary">← Back to Home</a>
     </div>
   </main>
-  
-  <footer>
-    <div class="container">
-      <p>&copy; 2026 Astrocytech. All rights reserved.</p>
-    </div>
-  </footer>
+
+  <!-- No footer on 404 page -->
+
+  <script>
+    // Mobile menu toggle
+    const menuBtn = document.querySelector('.mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    if (menuBtn && mobileMenu) {
+      menuBtn.addEventListener('click', () => {
+        const isOpen = mobileMenu.classList.toggle('active');
+        menuBtn.setAttribute('aria-expanded', isOpen);
+        menuBtn.classList.toggle('active');
+      });
+      
+      // Close menu on escape
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
+          mobileMenu.classList.remove('active');
+          menuBtn.setAttribute('aria-expanded', 'false');
+          menuBtn.classList.remove('active');
+        }
+      });
+    }
+  </script>
   <noscript>
     <style>
-      nav { display: block !important; }
+      .mobile-menu { display: none; }
+      .mobile-menu.active { display: block; }
     </style>
   </noscript>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js').catch(err => console.log('SW registration failed:', err));
+    }
+  </script>
 </body>
 </html>

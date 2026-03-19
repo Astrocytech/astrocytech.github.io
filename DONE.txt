@@ -1,0 +1,51 @@
+# DONE - Completed Improvements for Astrocytech Website
+# Items moved from TODO.txt after completion
+
+## HIGH Priority - Completed
+
+- [HIGH] Optimize hero image (currently 1.5MB) - convert to WebP or compress
+- [HIGH] Add focus trap for mobile menu when open
+- [HIGH] Add keyboard escape key to close mobile menu
+- [HIGH] Ensure all interactive elements have focus visible states
+- [HIGH] Add FAQ structured data (JSON-LD)
+- [HIGH] Add canonical tags on all internal pages
+- [HIGH] Add Content Security Policy (CSP) meta tag
+- [HIGH] Improve form validation feedback
+- [HIGH] Add success/error states for all forms
+- [HIGH] Add WebP format support
+- [HIGH] Add keyboard-only navigation
+- [HIGH] Remove tech stack badges from glyphser.html
+- [HIGH] Add lazy loading for below-fold images
+- [HIGH] Add skip link for footer
+- [HIGH] Add favicon.ico for older browsers
+- [HIGH] Add 404.html custom error page
+- [HIGH] Remove unused files in /old_data/ directory
+- [HIGH] Add web app manifest with icons
+- [HIGH] Add responsive images (srcset)
+- [HIGH] Add touch-friendly targets (44px minimum)
+- [HIGH] Add proper labels to all form inputs (accessibility violation)
+- [HIGH] Add noscript tag for progressive enhancement (users without JS)
+- [HIGH] Preload critical fonts (Sora, Outfit)
+- [HIGH] Defer non-critical JavaScript (no external JS - already optimal)
+- [HIGH] Add keyboard navigation hints
+- [HIGH] Add visually hidden text for icon-only buttons (already done)
+- [HIGH] Add X-Frame-Options header
+- [HIGH] Add X-Content-Type-Options header
+- [HIGH] Add Referrer-Policy header
+- [HIGH] Add smooth scroll for all anchor links (already implemented)
+- [HIGH] Add service worker for offline support
+- [HIGH] Fix placeholder links (href="#") in footer
+- [HIGH] Add rel="noopener noreferrer" to external links
+- [HIGH] Fix sitemap.xml - remove invalid www.astrocytech.com URLs
+- [HIGH] Fix robots.txt - correct sitemap URL
+- [HIGH] Fix placeholder link in glyphser.html "Read Documentation"
+- [HIGH] Add favicon.ico link to all pages
+
+## MEDIUM Priority - Completed
+
+- [MEDIUM] Add security.txt file
+- [MEDIUM] Add breadcrumb navigation schema
+- [MEDIUM] Add HowTo structured data
+- [MEDIUM] Improve meta descriptions (already optimal)
+
+## Date Completed: 2026-03-16

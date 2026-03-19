@@ -1,35 +1,231 @@
-# TODO - Human Assistance Required
+# TODO - Potential Improvements for Astrocytech Website
+# Priority: HIGH = Critical, MEDIUM = Important, LOW = Nice to have
 
-## Completed Fixes
-- JavaScript errors (getElementById 'logo-link') - FIXED
-- Missing button type attributes - FIXED
-- Raw & characters encoded - FIXED
-- Navigation links between pages - FIXED
-- Font consistency between pages - FIXED
-- SEO meta tags (canonical, Open Graph, Twitter Cards) - FIXED
-- Accessibility (skip links, ARIA attributes) - FIXED
-- Forms with proper validation - FIXED
-- Favicon manifest - FIXED
-- JSON-LD structured data for SEO - FIXED
+## CRITICAL Issues Found
+- [DONE 2026-03-16] Fix placeholder links (href="#") in footer - these are broken/invalid links
+- [DONE 2026-03-16] Add rel="noopener noreferrer" to all external links with target="_blank" - security vulnerability
+- [DONE 2026-03-16] Fix sitemap.xml - contains invalid www.astrocytech.com URLs that aren't hosted there
+- [DONE 2026-03-16] Fix robots.txt - sitemap URL points to www.astrocytech.com instead of astrocytech.github.io
+- [DONE 2026-03-16] Fix placeholder link in glyphser.html "Read Documentation" (href="#") - needs valid link
+- [DONE 2026-03-16] Add favicon.ico link to all pages - file exists but not referenced (older browser support)
 
-## Remaining Items (Code Style Only - Non-Breaking)
-These are validator style preferences, not bugs:
-1. Trailing whitespace (54 instances) - cosmetic only
-2. Inline styles (11+ instances) - intentional for hero backgrounds
+## Performance Optimizations
+- [LOW] Add resource hints (preconnect, dns-prefetch)
+- [LOW] Minify CSS for production
+- [LOW] Consider image sprites for icons
+- [LOW] Add critical CSS inline for above-fold content
+- [LOW] Add browser caching headers
+- [LOW] Consider using CDN for assets
 
-## Could Be Improved (Not Critical)
-1. Remove unused files in /old_data/ directory (webflow artifacts)
-2. Consider adding favicon.ico for older browsers
-3. Consider adding a 404.html page
-4. Optimize hero image (currently 1.5MB)
-5. Replace placeholder alert() calls with actual form handling
+## Accessibility Improvements
+- [LOW] Add ARIA live regions for dynamic content
+- [LOW] Add more descriptive alt text for decorative elements
+- [LOW] Test with screen readers (NVDA, VoiceOver, JAWS)
 
-## External Resources
-- Google Fonts (Sora, Outfit, JetBrains Mono) - working (HTTP 200)
-- GitHub links - verified working
-- Hero image - verified exists (1.5MB)
-- Custom domain: astrocytech.com (CNAME configured)
+## SEO Enhancements
+- [DONE 2026-03-16] Add HowTo structured data
+- [DONE 2026-03-16] Add breadcrumb navigation schema
+- [LOW] Add Author schema for company
+- [DONE 2026-03-16] Improve meta descriptions for more pages (already optimal)
+- [LOW] Add hreflang tags if internationalizing
+- [LOW] Add Open Graph for more social platforms
+- [LOW] Add Twitter Premium Cards
+- [LOW] Create XML sitemap index for large sitemaps
+- [LOW] Add robots.txt disallow for admin areas
 
-## New Files Added
-- robots.txt - Search engine directives
-- sitemap.xml - Search engine sitemap
+## Browser & Device Support
+- [LOW] Add browser-specific optimizations
+- [LOW] Test and fix IE11 fallback styles if needed
+- [DONE 2026-03-16] Add web app manifest for PWA capabilities (already exists)
+- [LOW] Add Apple touch icon variants
+- [LOW] Add Windows tile icons
+
+## Code Quality
+- [LOW] Consolidate duplicate CSS rules
+- [LOW] Extract repeated HTML into reusable templates
+- [LOW] Add CSS custom properties for all colors
+- [LOW] Modularize CSS (split into components)
+- [LOW] Add CSS documentation/comments
+- [LOW] Set up ESLint for JavaScript
+- [LOW] Set up stylelint for CSS
+- [LOW] Add Prettier for code formatting
+
+## Security Enhancements
+- [DONE 2026-03-16] Add security.txt file
+
+## User Experience Improvements
+- [MEDIUM] Add mobile menu animation improvements
+- [LOW] Add scroll-to-top button
+- [LOW] Add loading states for buttons
+- [LOW] Add skeleton loading for cards
+- [LOW] Add toast notification system
+- [MEDIUM] Add cookie consent banner (GDPR)
+
+## Content Additions
+- [DONE 2026-03-16] Add FAQ section with structured data (already exists)
+- [LOW] Add case studies or success stories
+- [LOW] Add team/about page
+- [LOW] Add changelog/updates page
+- [LOW] Add real testimonials
+- [LOW] Add partner/client logos section
+- [LOW] Add video demonstrations
+- [LOW] Add documentation links
+
+## Design Enhancements
+- [DONE 2026-03-16] Improve dark mode with color picker toggle (auto dark mode already works)
+- [LOW] Add more animation options
+- [LOW] Add micro-interactions on hover/click
+- [LOW] Improve typography scale
+- [LOW] Add consistent spacing system
+- [LOW] Add visual feedback for all interactions
+- [LOW] Add skeleton loading states
+- [LOW] Improve card hover effects
+- [LOW] Add scroll-triggered animations
+
+## Testing Requirements
+- [LOW] Add automated browser testing (Selenium/Playwright)
+- [MEDIUM] Add accessibility testing (axe-core)
+- [LOW] Add visual regression testing
+- [LOW] Test on real devices
+- [LOW] Test with slow network connections
+- [LOW] Test with JavaScript disabled
+
+## Build & Deployment
+- [MEDIUM] Set up CI/CD pipeline
+- [MEDIUM] Add automated linting to CI
+- [MEDIUM] Add automated testing to CI
+- [MEDIUM] Add automated deployment
+- [LOW] Set up staging environment
+- [LOW] Add version control for content
+
+## Analytics & Monitoring
+- [MEDIUM] Add Google Analytics 4
+- [MEDIUM] Add error tracking (Sentry)
+- [LOW] Add heatmap tracking
+- [MEDIUM] Add conversion tracking
+- [LOW] Add performance monitoring
+
+## Internationalization (i18n)
+- [LOW] Add support for multiple languages
+- [LOW] Add hreflang for alternate languages
+- [LOW] Add language selector
+- [LOW] Add RTL support for Arabic/Hebrew
+- [LOW] Add translation files for common strings
+
+## Progressive Web App (PWA)
+- [LOW] Add push notification support
+- [LOW] Add background sync
+- [MEDIUM] Add install prompt
+- [LOW] Add cache strategies
+
+## Performance Monitoring
+- [LOW] Add Core Web Vitals tracking
+- [LOW] Add Real User Monitoring (RUM)
+- [LOW] Add synthetic monitoring
+- [LOW] Set performance budgets
+- [LOW] Add lighthouse CI checks
+
+## Developer Experience
+- [LOW] Add component library documentation
+- [LOW] Add design system documentation
+- [LOW] Add coding standards guide
+- [LOW] Add contribution guidelines
+- [LOW] Add Git hooks for code quality
+- [LOW] Add conventional commits
+
+## Documentation
+- [LOW] Add inline code comments
+- [LOW] Add API documentation
+- [LOW] Add integration guides
+- [LOW] Add troubleshooting guide
+- [LOW] Add video tutorials
+
+## Features
+- [LOW] Add search functionality
+- [LOW] Add blog/news section
+- [LOW] Add pricing page
+- [LOW] Add comparison table
+- [LOW] Add product roadmap
+- [LOW] Add community forum
+- [LOW] Add live chat support
+
+## Conversion Optimization
+- [LOW] Add exit intent popup
+- [LOW] Add email capture modals
+- [LOW] Add retargeting pixels
+- [LOW] Add A/B testing capability
+- [LOW] Add heatmaps
+- [LOW] Add user recordings
+
+## Social Proof
+- [LOW] Add customer logos
+- [LOW] Add usage statistics
+- [LOW] Add GitHub stars/followers
+- [LOW] Add download counters
+- [LOW] Add live activity indicators
+
+## Trust & Compliance
+- [LOW] Add SSL certificate details
+- [MEDIUM] Add GDPR compliance
+- [LOW] Add cookie policy
+- [LOW] Add privacy policy page
+- [LOW] Add terms of service
+- [LOW] Add HIPAA compliance if needed
+
+## Performance - Images
+- [LOW] Add AVIF format support
+- [MEDIUM] Add lazy loading library
+- [LOW] Add blur-up image loading
+- [LOW] Add image placeholders
+
+## Performance - Code
+- [LOW] Add code splitting
+- [LOW] Add tree shaking
+- [LOW] Add bundle analysis
+- [LOW] Add gzip/brotli compression
+- [LOW] Add HTTP/2 push
+- [LOW] Add HTTP/3 support
+
+## Mobile Optimizations
+- [LOW] Add pull-to-refresh
+- [LOW] Add swipe navigation
+- [LOW] Add mobile-specific gestures
+- [LOW] Add mobile performance budgets
+- [LOW] Add AMP version if needed
+
+## Email Marketing
+- [LOW] Add email newsletter signup
+- [LOW] Add email verification
+- [LOW] Add drip campaign setup
+- [LOW] Add email templates
+- [LOW] Add email analytics
+
+## SEO - Technical
+- [LOW] Add pagination schema
+- [LOW] Add review/rating schema
+- [LOW] Add product schema
+- [MEDIUM] Add organization schema
+- [LOW] Add local business schema
+
+## SEO - Content
+- [LOW] Add meta keywords
+- [LOW] Add Open Graph images
+- [LOW] Add Twitter Card images
+- [LOW] Add structured data for articles
+- [LOW] Add video sitemap
+- [LOW] Add news sitemap
+
+## Accessibility - Advanced
+- [MEDIUM] Add WCAG 2.1 AA compliance
+- [LOW] Add WCAG 2.2 compliance
+- [LOW] Add Section 508 compliance
+- [LOW] Add EN 301 549 compliance
+- [MEDIUM] Add screen reader optimization
+
+## Design Systems
+- [LOW] Add design tokens
+- [LOW] Add component library
+- [LOW] Add pattern library
+- [LOW] Add typography scale
+- [LOW] Add color palette
+- [LOW] Add spacing scale
