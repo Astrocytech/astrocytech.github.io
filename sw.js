@@ -1,4 +1,4 @@
-const CACHE_NAME = 'astrocytech-v1';
+const CACHE_NAME = 'astrocytech-v2';
 const urlsToCache = [
   '/',
   '/index.html',
@@ -6,11 +6,10 @@ const urlsToCache = [
   '/404.html',
   '/files/astrocytech.css',
   '/files/home-hero@2x.webp',
-  '/files/glyphser/glyphser-dashboard-dark.webp',
-  '/files/glyphser/glyphser-runs-dark.webp',
-  '/files/glyphser/glyphser-run-detail-dark.webp',
-  '/files/glyphser/glyphser-certification-dark.webp',
-  '/files/glyphser/glyphser-docs-dark.webp',
+  '/files/glyphser/glyphser-dashboard-light.webp',
+  '/files/glyphser/glyphser-runs-light.webp',
+  '/files/glyphser/glyphser-run-detail-light.webp',
+  '/files/glyphser/glyphser-certification-light.webp',
   '/files/favicon_io/favicon-32x32.png',
   '/files/favicon_io/favicon-16x16.png',
   '/files/favicon_io/apple-touch-icon.png',

@@ -12,7 +12,7 @@
   <meta property="og:url" content="https://astrocytech.github.io/glyphser.html">
   <meta property="og:title" content="Glyphser - Deterministic ML Execution">
   <meta property="og:description" content="Glyphser is Astrocytech's deterministic runtime specification and conformance toolkit for verifiable machine learning execution.">
-  <meta property="og:image" content="https://astrocytech.github.io/files/glyphser/glyphser-dashboard-dark.webp">
+  <meta property="og:image" content="https://astrocytech.github.io/files/glyphser/glyphser-dashboard-light.webp">
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
@@ -163,7 +163,7 @@
       <div class="hero-visual">
         <figure class="product-shot">
           <img
-            src="files/glyphser/glyphser-dashboard-dark.webp"
+            src="files/glyphser/glyphser-dashboard-light.webp"
             alt="Glyphser dashboard showing verification KPIs and recent runs"
             loading="eager"
             decoding="async"
@@ -276,7 +276,7 @@
       <div class="evidence-grid" aria-label="Product evidence">
         <figure class="product-shot">
           <img
-            src="files/glyphser/glyphser-runs-dark.webp"
+            src="files/glyphser/glyphser-runs-light.webp"
             alt="Glyphser runs list showing verification status, timestamps, and run identifiers"
             loading="lazy"
             decoding="async"
@@ -285,7 +285,7 @@
         </figure>
         <figure class="product-shot">
           <img
-            src="files/glyphser/glyphser-run-detail-dark.webp"
+            src="files/glyphser/glyphser-run-detail-light.webp"
             alt="Glyphser run detail view showing artifacts, pass/fail status, and audit-ready evidence"
             loading="lazy"
             decoding="async"
@@ -330,22 +330,6 @@
         </div>
       </div>
 
-      <div class="evidence-callout">
-        <div class="evidence-copy">
-          <h3>Certification-ready evidence</h3>
-          <p>Bundle artifacts, attestations, and pass/fail gates into a shareable certificate for audits and regulated workflows.</p>
-        </div>
-        <figure class="product-shot">
-          <img
-            src="files/glyphser/glyphser-certification-dark.webp"
-            alt="Glyphser Certification Builder showing evidence bundles and certificate configuration"
-            loading="lazy"
-            decoding="async"
-          />
-          <figcaption>Certification Builder</figcaption>
-        </figure>
-      </div>
-      
       <!-- Architecture Components -->
       <div class="features-grid" style="grid-template-columns: repeat(4, 1fr);">
         <div class="feature-card">
@@ -430,6 +414,22 @@
           <p>Validate that CI runs produce consistent results across any environment.</p>
         </div>
       </div>
+
+      <div class="evidence-callout">
+        <div class="evidence-copy">
+          <h3>Certification-ready evidence</h3>
+          <p>Bundle artifacts, attestations, and pass/fail gates into a shareable certificate for audits and regulated workflows.</p>
+        </div>
+        <figure class="product-shot">
+          <img
+            src="files/glyphser/glyphser-certification-light.webp"
+            alt="Glyphser Certification Builder showing evidence bundles and certificate configuration"
+            loading="lazy"
+            decoding="async"
+          />
+          <figcaption>Certification Builder</figcaption>
+        </figure>
+      </div>
     </div>
   </section>
 
@@ -451,8 +451,7 @@
           </div>
           <span class="code-title">manifest.yaml</span>
         </div>
-        <div class="glyphser-card-grid">
-          <pre class="code-block"><code><span class="code-keyword">run</span>:
+        <pre class="code-block"><code><span class="code-keyword">run</span>:
   <span class="code-property">name</span>: <span class="code-string">"example_run"</span>
 
 <span class="code-keyword">operators</span>:
@@ -468,15 +467,6 @@
 <span class="code-keyword">environment</span>:
   <span class="code-property">python</span>: <span class="codeString">"&gt;=3.9"</span>
   <span class="code-property">deterministic</span>: <span class="codeBoolean">true</span></code></pre>
-          <figure class="product-shot product-shot--flush">
-            <img
-              src="files/glyphser/glyphser-docs-dark.webp"
-              alt="Glyphser documentation showing core concepts and navigation"
-              loading="lazy"
-              decoding="async"
-            />
-          </figure>
-        </div>
         <div class="glyphser-actions">
           <a href="https://github.com/Astrocytech/Glyphser" class="btn btn-primary">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">

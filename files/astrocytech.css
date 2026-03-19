@@ -592,9 +592,9 @@ a:hover {
   margin: 0;
   border-radius: 18px;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  background: #0b1220;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.28);
+  border: 1px solid rgba(15, 23, 42, 0.14);
+  background: #ffffff;
+  box-shadow: 0 18px 46px rgba(15, 23, 42, 0.12);
 }
 
 .product-shot img {
@@ -605,9 +605,9 @@ a:hover {
 
 .product-shot figcaption {
   padding: 0.75rem 1rem;
-  background: rgba(11, 18, 32, 0.85);
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  color: rgba(255, 255, 255, 0.78);
+  background: rgba(255, 255, 255, 0.92);
+  border-top: 1px solid rgba(15, 23, 42, 0.08);
+  color: rgba(15, 23, 42, 0.72);
   font-size: 0.8125rem;
   letter-spacing: 0.02em;
 }
@@ -650,20 +650,6 @@ a:hover {
   line-height: 1.7;
 }
 
-.glyphser-card-grid {
-  display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
-}
-
-.glyphser-card-grid .code-block {
-  margin: 0;
-  height: 100%;
-  border-right: 1px solid var(--border);
-}
-
-.glyphser-card-grid .product-shot {
-  height: 100%;
-}
 
 /* Enhanced primary button with glow effect */
 .btn-primary {
@@ -1391,14 +1377,8 @@ a:focus-visible {
   }
 
   .evidence-grid,
-  .evidence-callout,
-  .glyphser-card-grid {
+  .evidence-callout {
     grid-template-columns: 1fr;
-  }
-
-  .glyphser-card-grid .code-block {
-    border-right: 0;
-    border-bottom: 1px solid var(--border);
   }
 
   .use-cases-grid {
