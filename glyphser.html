@@ -131,11 +131,6 @@
     <div class="hero-decor hero-decor-3"></div>
     <div class="hero-content hero-split">
       <div class="hero-text">
-        <div class="hero-badge">
-          <span class="badge-dot"></span>
-          Open Source
-        </div>
-        <div class="glyphser-logo-text" style="font-size: clamp(4rem, 12vw, 8rem); margin-bottom: 1rem;">𝒢⟦·⟧</div>
         <h1 class="hero-title">
           <span class="title-heavy">Deterministic</span><br>
           <span class="text-gradient">Verification Engine</span><br>
@@ -152,12 +147,15 @@
               <path d="M3.5 8h9m-3-3l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
           </a>
-          <a href="https://github.com/Astrocytech/Glyphser" class="btn btn-secondary">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
-            </svg>
-            GitHub
-          </a>
+          <span class="hero-cta-float" aria-label="GitHub and license">
+            <a href="https://github.com/Astrocytech/Glyphser" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+              </svg>
+              GitHub
+            </a>
+            <span class="hero-os-tag">Open Source</span>
+          </span>
         </div>
       </div>
       <div class="hero-visual">
@@ -419,6 +417,16 @@
           <h3>CI Reproducibility</h3>
           <p>Validate that CI runs produce consistent results across any environment.</p>
         </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M9 3h6m-7 7h8m-8 4h8m-8 4h6M7 3a2 2 0 00-2 2v14a2 2 0 002 2h10a2 2 0 002-2V7.5L16.5 3H7z"/>
+            </svg>
+          </div>
+          <h3>Incident Forensics</h3>
+          <p>Reconstruct exactly what happened in production runs with verifiable artifacts and deterministic replay.</p>
+        </div>
       </div>
 
       <div class="evidence-callout">
@@ -476,7 +484,7 @@
   <span class="code-property">python</span>: <span class="codeString">"&gt;=3.9"</span>
   <span class="code-property">deterministic</span>: <span class="codeBoolean">true</span></code></pre>
         <div class="glyphser-actions">
-          <a href="https://github.com/Astrocytech/Glyphser" class="btn btn-primary">
+          <a href="https://github.com/Astrocytech/Glyphser" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
               <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
             </svg>
@@ -537,7 +545,7 @@ npm run dev
           <p>Start with Glyphser today and make your machine learning runs deterministic and verifiable.</p>
         </div>
         <div class="cta-actions">
-          <a href="https://github.com/Astrocytech/Glyphser" class="btn btn-white">GitHub Repo</a>
+          <a href="https://github.com/Astrocytech/Glyphser" class="btn btn-white" target="_blank" rel="noopener noreferrer">GitHub Repo</a>
           <a href="#contact" class="btn btn-ghost-white">Contact Us</a>
         </div>
       </div>
@@ -609,7 +617,7 @@ npm run dev
           </a>
           <p>Deterministic data infrastructure for the modern era.</p>
           <div class="footer-social">
-            <a href="https://github.com/Astrocytech" aria-label="GitHub">
+            <a href="https://github.com/Astrocytech" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
               </svg>
@@ -657,7 +665,11 @@ npm run dev
   <div id="image-modal" class="image-modal" hidden>
     <div class="image-modal__backdrop" data-close></div>
     <div class="image-modal__content" role="dialog" aria-modal="true" aria-label="Image preview">
-      <button type="button" class="image-modal__close" aria-label="Close image preview">&times;</button>
+      <button type="button" class="image-modal__close" aria-label="Close image preview">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
       <img class="image-modal__img" alt="">
     </div>
   </div>

@@ -1,4 +1,4 @@
-const CACHE_NAME = 'astrocytech-v14';
+const CACHE_NAME = 'astrocytech-v28';
 const urlsToCache = [
   '/',
   '/index.html',

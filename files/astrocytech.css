@@ -574,6 +574,30 @@ a:hover {
   align-items: center;
 }
 
+.hero-cta-float {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.hero-os-tag {
+  position: absolute;
+  top: calc(100% + 0.35rem);
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  pointer-events: none;
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: rgba(15, 23, 42, 0.42);
+  opacity: 0.9;
+}
+
 /* Sub-header letter spacing for engineered look */
 .section-tag,
 .hero-badge,
@@ -665,12 +689,22 @@ a:hover {
   width: 44px;
   height: 44px;
   border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
   border: 1px solid rgba(255, 255, 255, 0.22);
   background: rgba(2, 6, 23, 0.55);
   color: white;
-  font-size: 1.5rem;
-  line-height: 1;
+  font-size: 0;
+  line-height: 0;
   cursor: pointer;
+}
+
+.image-modal__close svg {
+  width: 22px;
+  height: 22px;
+  display: block;
 }
 
 .image-modal__close:hover {
@@ -1860,10 +1894,28 @@ section {
 }
 
 .install-grid {
-  grid-template-columns: repeat(3, minmax(0, 340px));
-  justify-content: center;
-  max-width: 1100px;
+  grid-template-columns: 1fr;
+  max-width: 920px;
   margin: 0 auto;
+}
+
+.install-grid .feature-card pre {
+  white-space: pre;
+}
+
+.install-grid .feature-card {
+  padding: var(--space-md);
+}
+
+.install-grid .feature-card h3 {
+  margin-bottom: var(--space-xs);
+  font-size: 1.0625rem;
+}
+
+.install-grid .feature-card pre {
+  padding: 0.625rem 0.75rem;
+  font-size: 0.78125rem;
+  line-height: 1.5;
 }
 
 .feature-card {
