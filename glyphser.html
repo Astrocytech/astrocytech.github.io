@@ -12,7 +12,7 @@
   <meta property="og:url" content="https://astrocytech.github.io/glyphser.html">
   <meta property="og:title" content="Glyphser - Deterministic ML Execution">
   <meta property="og:description" content="Glyphser is Astrocytech's deterministic runtime specification and conformance toolkit for verifiable machine learning execution.">
-  <meta property="og:image" content="https://astrocytech.github.io/files/glyphser/glyphser-dashboard-hero-light.webp">
+  <meta property="og:image" content="https://astrocytech.github.io/files/glyphser/glyphser-dashboard-hero-light-v2.webp">
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
@@ -162,13 +162,15 @@
       </div>
       <div class="hero-visual">
         <figure class="product-shot">
-          <img
-            src="files/glyphser/glyphser-dashboard-hero-light.webp"
-            alt="Glyphser dashboard showing verification KPIs and recent runs"
-            loading="eager"
-            decoding="async"
-            fetchpriority="high"
-          />
+          <button type="button" class="product-shot-trigger" data-fullsrc="files/glyphser/glyphser-dashboard-full-light.webp" aria-label="Open Glyphser dashboard screenshot full size">
+            <img
+              src="files/glyphser/glyphser-dashboard-hero-light-v2.webp"
+              alt="Glyphser dashboard showing verification KPIs and recent runs"
+              loading="eager"
+              decoding="async"
+              fetchpriority="high"
+            />
+          </button>
         </figure>
       </div>
     </div>
@@ -275,21 +277,25 @@
 
       <div class="evidence-grid" aria-label="Product evidence">
         <figure class="product-shot">
-          <img
-            src="files/glyphser/glyphser-runs-light.webp"
-            alt="Glyphser runs list showing verification status, timestamps, and run identifiers"
-            loading="lazy"
-            decoding="async"
-          />
+          <button type="button" class="product-shot-trigger" data-fullsrc="files/glyphser/glyphser-runs-full-light.webp" aria-label="Open Glyphser runs screenshot full size">
+            <img
+              src="files/glyphser/glyphser-runs-light-v2.webp"
+              alt="Glyphser runs list showing verification status, timestamps, and run identifiers"
+              loading="lazy"
+              decoding="async"
+            />
+          </button>
           <figcaption>Runs</figcaption>
         </figure>
         <figure class="product-shot">
-          <img
-            src="files/glyphser/glyphser-run-detail-light.webp"
-            alt="Glyphser run detail view showing artifacts, pass/fail status, and audit-ready evidence"
-            loading="lazy"
-            decoding="async"
-          />
+          <button type="button" class="product-shot-trigger" data-fullsrc="files/glyphser/glyphser-run-detail-full-light.webp" aria-label="Open Glyphser evidence screenshot full size">
+            <img
+              src="files/glyphser/glyphser-run-detail-light-v2.webp"
+              alt="Glyphser run detail view showing artifacts, pass/fail status, and audit-ready evidence"
+              loading="lazy"
+              decoding="async"
+            />
+          </button>
           <figcaption>Evidence</figcaption>
         </figure>
       </div>
@@ -421,12 +427,14 @@
           <p>Bundle artifacts, attestations, and pass/fail gates into a shareable certificate for audits and regulated workflows.</p>
         </div>
         <figure class="product-shot">
-          <img
-            src="files/glyphser/glyphser-certification-light.webp"
-            alt="Glyphser Certification Builder showing evidence bundles and certificate configuration"
-            loading="lazy"
-            decoding="async"
-          />
+          <button type="button" class="product-shot-trigger" data-fullsrc="files/glyphser/glyphser-certification-full-light.webp" aria-label="Open Glyphser certification screenshot full size">
+            <img
+              src="files/glyphser/glyphser-certification-light-v2.webp"
+              alt="Glyphser Certification Builder showing evidence bundles and certificate configuration"
+              loading="lazy"
+              decoding="async"
+            />
+          </button>
           <figcaption>Certification Builder</figcaption>
         </figure>
       </div>
@@ -646,6 +654,14 @@ npm run dev
     </div>
   </footer>
 
+  <div id="image-modal" class="image-modal" hidden>
+    <div class="image-modal__backdrop" data-close></div>
+    <div class="image-modal__content" role="dialog" aria-modal="true" aria-label="Image preview">
+      <button type="button" class="image-modal__close" aria-label="Close image preview">&times;</button>
+      <img class="image-modal__img" alt="">
+    </div>
+  </div>
+
   <script>
     // Smooth scroll
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -704,6 +720,51 @@ npm run dev
         }
       });
     });
+
+    // Image modal (full-size preview)
+    (() => {
+      const modal = document.getElementById('image-modal');
+      if (!modal) return;
+      const modalImg = modal.querySelector('.image-modal__img');
+      const closeBtn = modal.querySelector('.image-modal__close');
+      const backdrop = modal.querySelector('.image-modal__backdrop');
+      let lastFocused = null;
+
+      const openModal = (src, alt) => {
+        lastFocused = document.activeElement;
+        modalImg.src = src;
+        modalImg.alt = alt || 'Image preview';
+        modal.hidden = false;
+        document.body.classList.add('modal-open');
+        closeBtn.focus();
+      };
+
+      const closeModal = () => {
+        modal.hidden = true;
+        modalImg.src = '';
+        modalImg.alt = '';
+        document.body.classList.remove('modal-open');
+        if (lastFocused && typeof lastFocused.focus === 'function') {
+          lastFocused.focus();
+        }
+      };
+
+      document.querySelectorAll('.product-shot-trigger').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const img = btn.querySelector('img');
+          if (!img) return;
+          const fullSrc = btn.dataset.fullsrc || img.currentSrc || img.src;
+          openModal(fullSrc, img.alt);
+        });
+      });
+
+      closeBtn.addEventListener('click', closeModal);
+      backdrop.addEventListener('click', closeModal);
+
+      document.addEventListener('keydown', (e) => {
+        if (!modal.hidden && e.key === 'Escape') closeModal();
+      });
+    })();
   </script>
   <noscript>
     <style>

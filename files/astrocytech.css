@@ -603,6 +603,84 @@ a:hover {
   height: auto;
 }
 
+.product-shot-trigger {
+  width: 100%;
+  display: block;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: zoom-in;
+}
+
+.product-shot-trigger:focus-visible {
+  outline: 2px solid var(--accent-primary);
+  outline-offset: 2px;
+  border-radius: 14px;
+}
+
+.image-modal[hidden] {
+  display: none;
+}
+
+.image-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 20000;
+  display: grid;
+  place-items: center;
+}
+
+.image-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(2, 6, 23, 0.72);
+}
+
+.image-modal__content {
+  position: relative;
+  display: inline-block;
+  width: fit-content;
+  max-width: 96vw;
+  max-height: 92vh;
+  padding: 0;
+}
+
+.image-modal__img {
+  display: block;
+  max-width: 96vw;
+  max-height: 88vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: white;
+  box-shadow: 0 28px 90px rgba(0, 0, 0, 0.45);
+}
+
+.image-modal__close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: rgba(2, 6, 23, 0.55);
+  color: white;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.image-modal__close:hover {
+  background: rgba(2, 6, 23, 0.7);
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
 .product-shot figcaption {
   padding: 0.75rem 1rem;
   background: rgba(255, 255, 255, 0.92);

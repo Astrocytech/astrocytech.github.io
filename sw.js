@@ -1,4 +1,4 @@
-const CACHE_NAME = 'astrocytech-v3';
+const CACHE_NAME = 'astrocytech-v14';
 const urlsToCache = [
   '/',
   '/index.html',
@@ -6,11 +6,17 @@ const urlsToCache = [
   '/404.html',
   '/files/astrocytech.css',
   '/files/home-hero@2x.webp',
-  '/files/glyphser/glyphser-dashboard-light.webp',
-  '/files/glyphser/glyphser-dashboard-hero-light.webp',
-  '/files/glyphser/glyphser-runs-light.webp',
-  '/files/glyphser/glyphser-run-detail-light.webp',
-  '/files/glyphser/glyphser-certification-light.webp',
+  '/files/glyphser/glyphser-dashboard-light-v2.webp',
+  '/files/glyphser/glyphser-dashboard-hero-light-v2.webp',
+  '/files/glyphser/glyphser-runs-light-v2.webp',
+  '/files/glyphser/glyphser-run-detail-light-v2.webp',
+  '/files/glyphser/glyphser-certification-light-v2.webp',
+  '/files/glyphser/glyphser-dashboard-full-light.webp',
+  '/files/glyphser/glyphser-runs-full-light.webp',
+  '/files/glyphser/glyphser-run-detail-full-light.webp',
+  '/files/glyphser/glyphser-certification-full-light.webp',
+  '/files/glyphser/glyphser-docs-full-light.webp',
+  '/files/glyphser/glyphser-module-explorer-full-light.webp',
   '/files/favicon_io/favicon-32x32.png',
   '/files/favicon_io/favicon-16x16.png',
   '/files/favicon_io/apple-touch-icon.png',
@@ -45,6 +51,20 @@ self.addEventListener('activate', event => {
 });
 
 self.addEventListener('fetch', event => {
+  // Network-first for HTML navigations so content updates without cache-busting.
+  if (event.request.mode === 'navigate') {
+    event.respondWith(
+      fetch(event.request)
+        .then(response => {
+          const responseToCache = response.clone();
+          caches.open(CACHE_NAME).then(cache => cache.put(event.request, responseToCache));
+          return response;
+        })
+        .catch(() => caches.match(event.request).then(r => r || caches.match('/404.html')))
+    );
+    return;
+  }
+
   event.respondWith(
     caches.match(event.request)
       .then(response => {
