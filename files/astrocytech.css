@@ -684,10 +684,10 @@ a:hover {
 
 .image-modal__close {
   position: absolute;
-  top: 0.75rem;
-  right: 0.75rem;
-  width: 44px;
-  height: 44px;
+  top: 0.6rem;
+  right: 0.6rem;
+  width: 40px;
+  height: 40px;
   border-radius: 999px;
   display: flex;
   align-items: center;
@@ -702,8 +702,8 @@ a:hover {
 }
 
 .image-modal__close svg {
-  width: 22px;
-  height: 22px;
+  width: 20px;
+  height: 20px;
   display: block;
 }
 

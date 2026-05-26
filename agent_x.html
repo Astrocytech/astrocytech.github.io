@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Agent_X - Governed Universal Seed Kernel | Astrocytech</title>
+<meta content="Agent_X is Astrocytech's governed universal seed kernel: a minimal, replayable L0 foundation for agents, controllers, and swarm orchestrators evolved by an external AI or coding workflow." name="description"/>
+<link href="https://astrocytech.github.io/agent_x.html" rel="canonical"/>
+<!-- Open Graph -->
+<meta content="website" property="og:type"/>
+<meta content="https://astrocytech.github.io/agent_x.html" property="og:url"/>
+<meta content="Agent_X - Governed Universal Seed Kernel" property="og:title"/>
+<meta content="A minimal governed L0 seed kernel for replayable, evidence-producing agent evolution." property="og:description"/>
+<meta content="https://raw.githubusercontent.com/Astrocytech/Agent_X/main/DOCUMENTS/text_logo.png" property="og:image"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Agent_X - Governed Universal Seed Kernel" name="twitter:title"/>
+<meta content="A governed, replayable L0 seed kernel designed to evolve safely into specialized agents, controllers, or orchestrators." name="twitter:description"/>
+<!-- Theme Color -->
+<meta content="#0374b4" name="theme-color"/>
+<!-- Structured Data -->
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareSourceCode",
+    "name": "Agent_X",
+    "description": "Agent_X is a governed universal seed kernel: a minimal L0 runtime foundation with strict contracts, governance-before-action, replayable evidence, checkpointing, and externally governed evolution paths.",
+    "url": "https://astrocytech.github.io/agent_x.html",
+    "codeRepository": "https://github.com/Astrocytech/Agent_X",
+    "programmingLanguage": "Python",
+    "author": {
+      "@type": "Organization",
+      "name": "Astrocytech",
+      "url": "https://astrocytech.github.io/"
+    }
+  }
+  </script>
+<!-- Breadcrumb Structured Data -->
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://astrocytech.github.io/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Agent_X",
+        "item": "https://astrocytech.github.io/agent_x.html"
+      }
+    ]
+  }
+  </script>
+<!-- Content Security Policy -->
+<meta content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https:;" http-equiv="Content-Security-Policy"/>
+<!-- Security Headers -->
+<meta content="DENY" http-equiv="X-Frame-Options"/>
+<meta content="nosniff" http-equiv="X-Content-Type-Options"/>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&amp;family=Outfit:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;700&amp;display=swap" rel="preload"/>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&amp;family=Outfit:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<!-- Styles -->
+<link href="files/astrocytech.css" rel="stylesheet"/>
+<!-- Favicon -->
+<link href="files/favicon_io/favicon.ico" rel="icon" type="image/x-icon"/>
+<link href="files/favicon_io/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="files/favicon_io/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="files/favicon_io/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="files/favicon_io/site.webmanifest" rel="manifest"/>
+<style>
+    .agent-x-logo-shot { background: transparent; padding: 0; border-radius: 0; box-shadow: none; border: none; }
+    .agent-x-logo-shot img { width: min(100%, 800px); height: auto; display: block; object-fit: contain; margin: 0 auto; }
+    .hero-text { text-align: center; max-width: 720px; margin: 0 auto; }
+    .hero-title { font-size: clamp(1.75rem, 3.5vw, 2.5rem); }
+    .hero-desc { text-align: center; }
+    .hero-actions { justify-content: center; }
+  </style></head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<!-- Navigation -->
+<nav aria-label="Main navigation" class="nav">
+<div class="nav-inner">
+<a class="nav-logo" href="index.html" style="pointer-events:auto !important; z-index:9999 !important; position:relative !important;">
+<span class="logo-text">A(⋅)</span>
+<span>Astrocytech</span>
+</a>
+<div class="nav-links">
+<a href="#concepts">Product</a>
+<a href="#architecture">How It Works</a>
+<a href="#use-cases">Use Cases</a>
+<a href="#contact">Contact</a>
+</div>
+<div class="nav-right">
+<a class="btn btn-primary btn-sm" href="https://github.com/Astrocytech/Agent_X" rel="noopener noreferrer" target="_blank">View GitHub</a>
+</div>
+<button aria-controls="mobile-menu" aria-expanded="false" aria-label="Toggle menu" class="mobile-menu-btn" type="button">
+<span></span>
+<span></span>
+<span></span>
+</button>
+</div>
+</nav>
+<!-- Mobile Menu -->
+<nav aria-label="Mobile navigation" class="mobile-menu" id="mobile-menu">
+<a href="#concepts">Product</a>
+<a href="#architecture">How It Works</a>
+<a href="#use-cases">Use Cases</a>
+<a href="#contact">Contact</a>
+<a class="btn btn-primary btn-full" href="https://github.com/Astrocytech/Agent_X" rel="noopener noreferrer" target="_blank">View GitHub</a>
+</nav>
+<!-- Hero Section -->
+<section class="hero" id="main-content" style="background-image: url('files/home-hero@2x.webp'); background-position: center center; background-repeat: no-repeat; background-size: cover; background-color: #e5f1f9;">
+<div class="hero-bg"></div>
+<div class="hero-decor hero-decor-1"></div>
+<div class="hero-decor hero-decor-2"></div>
+<div class="hero-decor hero-decor-3"></div>
+<div class="hero-content">
+<div class="hero-visual">
+<figure class="agent-x-logo-shot"><img alt="Agent_X product logo" decoding="async" fetchpriority="high" loading="eager" src="files/agent_x/text_logo.png"/></figure>
+</div>
+<div class="hero-text">
+<h1 class="hero-title">
+<span class="title-heavy">Governed</span> <span class="text-gradient">Seed Kernel</span> <span class="title-light">for Agent Evolution</span>
+</h1>
+<p class="hero-desc">
+          Agent_X is a minimal L0 foundation for building agents safely: stable entrypoint, strict contracts, governance-before-action, traceability, replay, checkpointing, and evidence-producing proofs. It is not a finished assistant; it is the governed seed layer that an external AI, coding agent, or orchestrator can evolve into specialized agents, controllers, or swarm systems.
+        </p>
+<div class="hero-actions">
+<a class="btn btn-primary" href="#concepts">
+            Learn More
+            <svg fill="none" height="16" viewbox="0 0 16 16" width="16">
+<path d="M3.5 8h9m-3-3l3 3-3 3" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+</svg>
+</a>
+<span aria-label="GitHub and license" class="hero-cta-float">
+<a class="btn btn-secondary" href="https://github.com/Astrocytech/Agent_X" rel="noopener noreferrer" target="_blank">
+<svg fill="currentColor" height="18" viewbox="0 0 24 24" width="18">
+<path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"></path>
+</svg>
+              GitHub
+            </a>
+<span class="hero-os-tag">Proprietary Source</span>
+</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Agent_X Section -->
+<section class="features section-alt">
+<div class="section-inner">
+<div class="section-header">
+<span class="section-tag">Why Agent_X</span>
+<h2 class="section-title">The Problem with<br/>Ungoverned Agents</h2>
+<p class="section-desc">
+          Most agent projects begin as ad hoc tool chains. Agent_X starts from the opposite direction: a small governed kernel whose boundaries, proofs, artifacts, and extension rules are explicit from the first turn.
+        </p>
+</div>
+<div class="features-grid">
+<div class="feature-card">
+<div class="feature-icon">
+<svg fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+</svg>
+</div>
+<h3>Unsafe Runtime Mutation</h3>
+<p>Production mode rejects live self-modification and promotion from normal turn execution, keeping the seed stable while evolution happens outside L0.</p>
+</div>
+<div class="feature-card">
+<div class="feature-icon">
+<svg fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+</svg>
+</div>
+<h3>Governance Gaps</h3>
+<p>Planner output must pass governance before the gateway executes. Direct shell, network, and unapproved filesystem writes are blocked in the default seed.</p>
+</div>
+<div class="feature-card">
+<div class="feature-icon">
+<svg fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+</svg>
+</div>
+<h3>Weak Evidence</h3>
+<p>Agent_X treats traces, checkpoints, memory, evaluation, and proof results as first-class artifacts instead of informal claims about what happened.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Core Concepts Section -->
+<section class="glyphser" id="concepts">
+<div class="section-inner">
+<div class="section-header">
+<span class="section-tag">Core Concepts</span>
+<h2 class="section-title">How Agent_X Works</h2>
+<p class="section-desc">
+          Agent_X keeps L0 small and evidence-focused. New capability belongs in an outer layer or behind governed extension/profile boundaries.
+        </p>
+</div>
+<div class="features-grid" style="grid-template-columns: repeat(2, 1fr); max-width: 900px; margin: 0 auto;">
+<div class="feature-card">
+<div class="feature-icon">
+<svg fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+</svg>
+</div>
+<h3>L0 Seed Runtime</h3>
+<p>A minimal bootable kernel with one governed execution path, strict request/response contracts, and no dependency on GPU, model, Docker, secrets, or network access.</p>
+</div>
+<div class="feature-card">
+<div class="feature-icon">
+<svg fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+</svg>
+</div>
+<h3>External Evolution Loop</h3>
+<p>A human, coding agent, or orchestrator proposes the smallest safe repository change, runs proof commands, and records actual evidence before the next step.</p>
+</div>
+<div class="feature-card">
+<div class="feature-icon">
+<svg fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+</svg>
+</div>
+<h3>Authority Documents</h3>
+<p>Seed invariants, capability manifest, extension ABI, acceptance checklists, and public contract policy define what may change and what must remain stable.</p>
+</div>
+<div class="feature-card">
+<div class="feature-icon">
+<svg fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+</svg>
+</div>
+<h3>Proof-Gated Change</h3>
+<p>Canonical proof commands verify boot, governed turns, governance denial, gateway ordering, evidence persistence, checkpoint replay, manifest closure, and phase alignment.</p>
+</div>
+</div>
+
+</div>
+</section>
+<!-- Architecture Section -->
+<section class="features" id="architecture">
+<div class="section-inner">
+<div class="section-header">
+<span class="section-tag">Architecture</span>
+<h2 class="section-title">Governance-First<br/>Execution Path</h2>
+<p class="section-desc">
+          Agent_X routes every seed turn through a narrow, inspectable path. The planner selects an intended tool, governance decides whether it is allowed, and the gateway becomes the only execution choke point.
+        </p>
+</div>
+<!-- Architecture Flow -->
+<div class="architecture-flow" style="display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 1rem; margin: 3rem 0;">
+<div class="arch-item" style="background: var(--bg-card); border: 1px solid var(--border); padding: 1rem 1.5rem; border-radius: 12px; text-align: center;">
+<span style="font-weight: 600; color: var(--accent-secondary);">Input</span>
+</div>
+<svg fill="none" height="24" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="24"><path d="M9 5l7 7-7 7"></path></svg>
+<div class="arch-item" style="background: var(--bg-card); border: 1px solid var(--border); padding: 1rem 1.5rem; border-radius: 12px; text-align: center;">
+<span style="font-weight: 600; color: var(--accent-secondary);">Planner</span>
+</div>
+<svg fill="none" height="24" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="24"><path d="M9 5l7 7-7 7"></path></svg>
+<div class="arch-item" style="background: var(--bg-card); border: 1px solid var(--border); padding: 1rem 1.5rem; border-radius: 12px; text-align: center;">
+<span style="font-weight: 600; color: var(--accent-secondary);">Governance</span>
+</div>
+<svg fill="none" height="24" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="24"><path d="M9 5l7 7-7 7"></path></svg>
+<div class="arch-item" style="background: var(--bg-card); border: 1px solid var(--border); padding: 1rem 1.5rem; border-radius: 12px; text-align: center;">
+<span style="font-weight: 600; color: var(--accent-secondary);">Gateway</span>
+</div>
+<svg fill="none" height="24" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="24"><path d="M9 5l7 7-7 7"></path></svg>
+<div class="arch-item" style="background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary)); padding: 1rem 1.5rem; border-radius: 12px; text-align: center;">
+<span style="font-weight: 700; color: white;">Evidence</span>
+</div>
+</div>
+<!-- Architecture Components -->
+<div class="features-grid" style="grid-template-columns: repeat(4, 1fr);">
+<div class="feature-card">
+<h3>KernelService</h3>
+<p style="font-size: 0.875rem;">Stable public entrypoint for booting and running governed seed turns.</p>
+</div>
+<div class="feature-card">
+<h3>Planner Port</h3>
+<p style="font-size: 0.875rem;">Selects the planned action while remaining constrained by contracts and boundaries.</p>
+</div>
+<div class="feature-card">
+<h3>Governance Port</h3>
+<p style="font-size: 0.875rem;">Allows, denies, or requires approval before anything reaches execution.</p>
+</div>
+<div class="feature-card">
+<h3>Evidence Ports</h3>
+<p style="font-size: 0.875rem;">Memory, evaluation, trace, and checkpoint ports preserve replayable proof of execution.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Use Cases Section -->
+<section class="glyphser" id="use-cases">
+<div class="section-inner">
+<div class="section-header">
+<span class="section-tag">Use Cases</span>
+<h2 class="section-title">Where Agent_X<br/>Excels</h2>
+<p class="section-desc">
+          Agent_X is designed for builders who want agent capability to grow without losing control of contracts, evidence, governance, and upgrade safety.
+        </p>
+</div>
+<div class="features-grid" style="grid-template-columns: repeat(3, 1fr);">
+<div class="feature-card">
+<div class="feature-icon">
+<svg fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+</svg>
+</div>
+<h3>Agent Prototyping</h3>
+<p>Start from a governed base before adding model calls, tools, memory, domain profiles, or specialized workflows.</p>
+</div>
+<div class="feature-card">
+<div class="feature-icon">
+<svg fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"></path>
+</svg>
+</div>
+<h3>Controller &amp; Orchestrator Seeds</h3>
+<p>Use L0 as the stable base from which external layers can evolve master agents, coordinators, and swarm orchestration patterns.</p>
+</div>
+<div class="feature-card">
+<div class="feature-icon">
+<svg fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+</svg>
+</div>
+<h3>Governed Tool Expansion</h3>
+<p>Add shell, network, filesystem, model, or external service capability only behind explicit extension boundaries and proof gates.</p>
+</div>
+<div class="feature-card">
+<div class="feature-icon">
+<svg fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+</svg>
+</div>
+<h3>Replayable Experiments</h3>
+<p>Compare candidate patches, profiles, and tool paths using reproducible proof outputs instead of subjective agent-performance claims.</p>
+</div>
+<div class="feature-card">
+<div class="feature-icon">
+<svg fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+</svg>
+</div>
+<h3>Audit-Ready Evolution</h3>
+<p>Produce change packages with code changes, updated contracts, tests, proof results, documentation, and release notes.</p>
+</div>
+<div class="feature-card">
+<div class="feature-icon">
+<svg fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M9 3h6m-7 7h8m-8 4h8m-8 4h6M7 3a2 2 0 00-2 2v14a2 2 0 002 2h10a2 2 0 002-2V7.5L16.5 3H7z"></path>
+</svg>
+</div>
+<h3>Contract-Stable Foundations</h3>
+<p>Protect the public surface as the system grows, so later agents can depend on stable entrypoints and compatibility rules.</p>
+</div>
+</div>
+<div class="evidence-callout">
+<div class="evidence-copy">
+<h3>Small steps, hard gates</h3>
+<p>Agent_X’s evolution doctrine favours small reversible changes, evidence discovery, incremental implementation, proof commands, and documented outcomes before the next expansion.</p>
+</div>
+
+</div>
+</div>
+</section>
+<!-- Code Section -->
+<section class="features">
+<div class="section-inner">
+<div class="section-header">
+<span class="section-tag">Example</span>
+<h2 class="section-title">Seed Runtime Commands</h2>
+<p class="section-desc">
+          Run the seed, prove the governed execution path, and clean generated artifacts with a compact Makefile workflow.
+        </p>
+</div>
+<div class="glyphser-card">
+<div class="code-header">
+<div class="code-dots">
+<span></span><span></span><span></span>
+</div>
+<span class="code-title">quick-start.sh</span>
+</div>
+<pre class="code-block"><code><span class="code-comment"># Clone Agent_X</span>
+git clone https://github.com/Astrocytech/Agent_X.git
+cd Agent_X
+
+<span class="code-comment"># Install minimal seed dependencies</span>
+make install
+
+<span class="code-comment"># Compile and boot the governed seed</span>
+make seed-boot
+
+<span class="code-comment"># Run canonical L0 proof suite</span>
+make prove-seed
+
+<span class="code-comment"># Execute one default governed seed turn</span>
+make run
+
+<span class="code-comment"># Remove generated runtime artifacts</span>
+make clean</code></pre>
+<div class="glyphser-actions">
+<a class="btn btn-primary" href="https://github.com/Astrocytech/Agent_X" rel="noopener noreferrer" target="_blank">
+<svg fill="currentColor" height="18" viewbox="0 0 24 24" width="18">
+<path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"></path>
+</svg>
+            View on GitHub
+          </a>
+<a class="btn btn-ghost" href="https://github.com/Astrocytech/Agent_X/blob/main/DOCUMENTS/AGENT_X_EVOLUTION_PROMPT.md" rel="noopener noreferrer" target="_blank">Evolution Prompt</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Installation Section -->
+<section class="glyphser section-alt">
+<div class="section-inner">
+<div class="section-header">
+<span class="section-tag">Get Started</span>
+<h2 class="section-title">Install, Prove &amp; Evolve</h2>
+<p class="section-desc">
+          Agent_X separates the minimal seed from the outer evolution layer. Start by proving L0, then use the guide and prompt packet to drive governed extension work.
+        </p>
+</div>
+<div class="features-grid install-grid">
+<div class="feature-card reveal active">
+<h3>Install the Seed</h3>
+<pre><code>git clone https://github.com/Astrocytech/Agent_X.git
+cd Agent_X
+make install</code></pre>
+</div>
+<div class="feature-card reveal active">
+<h3>Run Proofs</h3>
+<pre><code>make seed-boot
+make prove-seed
+make run</code></pre>
+</div>
+<div class="feature-card reveal active">
+<h3>Use the Evolution Packet</h3>
+<pre><code>DOCUMENTS/AGENT_X_EVOLUTION_PROMPT.md
+DOCUMENTS/AGENT_X_AGENT_EVOLUTION_GUIDE_V11.md
+SEED_ACCEPTANCE.md</code></pre>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="cta">
+<div class="shape-divider shape-top">
+<svg aria-hidden="true" class="nectar-shape-divider" fill="#ffffff" preserveaspectratio="none" viewbox="0 0 100 100">
+<path d="M0 100 C 50 0 80 0 100 100 Z"></path>
+</svg>
+</div>
+<div class="section-inner">
+<div class="cta-card">
+<div class="cta-content">
+<h2>Build agents from a governed seed.</h2>
+<p>Use Agent_X as the L0 foundation for proof-driven evolution into specialized agents, controllers, or orchestrated multi-agent systems.</p>
+</div>
+<div class="cta-actions">
+<a class="btn btn-white" href="https://github.com/Astrocytech/Agent_X" rel="noopener noreferrer" target="_blank">GitHub Repo</a>
+<a class="btn btn-ghost-white" href="#contact">Contact Us</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="contact" id="contact">
+<div class="section-inner">
+<div class="contact-grid">
+<div class="contact-info">
+<h2>Get in touch</h2>
+<p>Have questions about Agent_X, governed agent evolution, or Astrocytech products? Contact the team.</p>
+<div class="contact-links">
+<a class="contact-link" href="mailto:info@astrocytech.com">
+<span class="contact-label">General Inquiries</span>
+<span class="contact-value">info@astrocytech.com</span>
+</a>
+<a class="contact-link" href="mailto:admin@astrocytech.com">
+<span class="contact-label">Admin</span>
+<span class="contact-value">admin@astrocytech.com</span>
+</a>
+</div>
+</div>
+<div class="contact-form-wrapper">
+<form class="contact-form" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Message Sent!'; this.reset();">
+<div class="form-group">
+<label for="email">Email</label>
+<input id="email" placeholder="you@company.com" required="" type="email"/>
+</div>
+<div class="form-group">
+<label for="message">Message</label>
+<textarea id="message" placeholder="Tell us about your project..." rows="4"></textarea>
+</div>
+<button class="btn btn-primary btn-full" type="submit">Send Message</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="footer">
+<div class="footer-wave-wrap">
+<div class="footer-wave-layer footer-wave-back">
+<svg preserveaspectratio="none" viewbox="0 0 1440 220">
+<path d="M0,160 C240,220 480,60 720,120 C960,180 1200,100 1440,160 L1440,220 L0,220 Z"></path>
+</svg>
+</div>
+<div class="footer-wave-layer footer-wave-mid">
+<svg preserveaspectratio="none" viewbox="0 0 1440 220">
+<path d="M0,160 C240,100 480,180 720,140 C960,100 1200,160 1440,120 L1440,220 L0,220 Z"></path>
+</svg>
+</div>
+<div class="footer-wave-layer footer-wave-front">
+<svg preserveaspectratio="none" viewbox="0 0 1440 220">
+<path d="M0,160 C240,120 480,180 720,140 C960,100 1200,160 1440,120 L1440,220 L0,220 Z"></path>
+</svg>
+</div>
+</div>
+<div class="footer-inner">
+<div class="footer-grid">
+<div class="footer-brand">
+<a class="nav-logo" href="index.html" style="pointer-events:auto !important; z-index:9999 !important; position:relative !important;">
+<span class="logo-text">A(⋅)</span>
+<span>Astrocytech</span>
+</a>
+<p>Deterministic and governed infrastructure for the modern AI era.</p>
+<div class="footer-social">
+<a aria-label="GitHub" href="https://github.com/Astrocytech" rel="noopener noreferrer" target="_blank">
+<svg fill="currentColor" height="20" viewbox="0 0 24 24" width="20">
+<path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"></path>
+</svg>
+</a>
+<a aria-label="LinkedIn" href="https://linkedin.com/company/astrocytech">
+<svg fill="currentColor" height="20" viewbox="0 0 24 24" width="20">
+<path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path>
+</svg>
+</a>
+</div>
+<div class="newsletter">
+<h4>Subscribe to our newsletter</h4>
+<p>Get updates on governed agent infrastructure.</p>
+<form class="newsletter-form" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Subscribed!'; this.querySelector('input').value='';">
+<label class="visually-hidden" for="newsletter-email-agent-x">Email address</label>
+<input id="newsletter-email-agent-x" placeholder="Enter your email" required="" type="email"/>
+<button class="btn btn-primary" type="submit">Subscribe</button>
+</form>
+</div>
+</div>
+<div class="footer-links">
+<div class="footer-col">
+<h4>Product</h4>
+<a href="agent_x.html">Agent_X</a>
+<a href="glyphser.html">Glyphser</a>
+<a href="index.html">Home</a>
+<a href="https://github.com/Astrocytech/Agent_X" rel="noopener noreferrer" target="_blank">Documentation</a>
+</div>
+<div class="footer-col">
+<h4>Company</h4>
+<a href="#contact">Contact</a>
+</div>
+<div class="footer-col">
+<h4>Legal</h4>
+<span>Privacy</span>
+<span>Terms</span>
+</div>
+</div>
+</div>
+<div class="footer-bottom">
+<p>© 2026 Astrocytech. All rights reserved.</p>
+</div>
+</div>
+</footer>
+
+
+<noscript>
+<style>
+      .mobile-menu { display: none; }
+      .mobile-menu.active { display: block; }
+    </style>
+</noscript>
+<script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js').catch(err => console.log('SW registration failed:', err));
+    }
+  </script>
+</body>
+</html>
